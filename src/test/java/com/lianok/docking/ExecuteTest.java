@@ -1,13 +1,12 @@
 package com.lianok.docking;
 
 import cn.hutool.core.date.DateTime;
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
+import com.lianok.docking.enums.ChannelEnum;
+import com.lianok.docking.enums.PayStyleEnum;
+import com.lianok.docking.enums.PayWayEnum;
 import com.lianok.docking.request.*;
 import com.lianok.docking.response.*;
-import com.lianok.docking.util.HttpUtil;
 
-import java.lang.reflect.Type;
 import java.math.BigDecimal;
 
 /**
@@ -80,7 +79,7 @@ public class ExecuteTest {
         request.setDeviceNo(getThirdNo());
         request.setMerchantNo(MERCHANTNO);
         request.setOperatorAccount(ACCOUNT);
-        request.setPayWay("wechat");
+        request.setPayWay(PayWayEnum.getEnumValue(PayWayEnum.WECHAT));
         request.setPayAmount(BigDecimal.valueOf(0.01));
         request.setRemark("remark2");
 
@@ -111,10 +110,35 @@ public class ExecuteTest {
         request.setRemark("remark3");
         request.setAppId("appid");
         request.setOpenId("openid");
-        request.setPayWay("wechat");
+        request.setPayWay(PayWayEnum.getEnumValue(PayWayEnum.WECHAT));
         request.setPayAmount(BigDecimal.valueOf(0.01));
         request.setSubject("title");
         request.setBusinessOrderNo(getThirdNo());
+
+        ResponseResultBase response = client.execute(request);
+        assert response != null;
+        assert response.success();
+    }
+
+    private static void ApiHLMerchantWxpayConfigTest(){
+        ApiHLMerchantWxpayConfigRequest request = new ApiHLMerchantWxpayConfigRequest();
+        request.setOperatorAccount(ACCOUNT);
+        request.setMerchantNo(MERCHANTNO);
+        request.setAppId("appid");
+        request.setChannelCode(ChannelEnum.getEnumValue(ChannelEnum.ALIPAY));
+
+        ResponseResultBase response = client.execute(request);
+        assert response != null;
+        assert response.success();
+    }
+
+    private static void ApiHLMerchantSwitchChannelTest(){
+        ApiHLMerchantSwitchChannelRequest request = new ApiHLMerchantSwitchChannelRequest();
+        request.setOperatorAccount(ACCOUNT);
+        request.setMerchantNo(MERCHANTNO);
+        request.setChannelCode(ChannelEnum.getEnumValue(ChannelEnum.SUIXINGFU));
+        request.setPayStyle(PayStyleEnum.getEnumValue(PayStyleEnum.APPLET));
+        request.setPayWay(PayWayEnum.getEnumValue(PayWayEnum.WECHAT));
 
         ResponseResultBase response = client.execute(request);
         assert response != null;
