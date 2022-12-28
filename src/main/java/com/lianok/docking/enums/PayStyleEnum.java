@@ -1,6 +1,7 @@
 package com.lianok.docking.enums;
 
 /**
+ * 支付方式枚举
  * @author linshu
  * @create 2022/11/1 11:54
  */

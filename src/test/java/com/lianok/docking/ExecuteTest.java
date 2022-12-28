@@ -4,8 +4,14 @@ import cn.hutool.core.date.DateTime;
 import com.lianok.docking.enums.ChannelEnum;
 import com.lianok.docking.enums.PayStyleEnum;
 import com.lianok.docking.enums.PayWayEnum;
-import com.lianok.docking.request.*;
-import com.lianok.docking.response.*;
+import com.lianok.docking.request.applet.ApiHLMerchantSwitchChannelRequest;
+import com.lianok.docking.request.applet.ApiHLMerchantWxpayConfigRequest;
+import com.lianok.docking.request.applet.ApiHLOrderPayAppletRequest;
+import com.lianok.docking.request.pay.*;
+import com.lianok.docking.response.pay.ApiHLOrderCloseResponse;
+import com.lianok.docking.response.pay.ApiHLOrderPayBarcodeResponse;
+import com.lianok.docking.response.pay.ApiHLOrderPayDetailsResponse;
+import com.lianok.docking.response.pay.ApiHLOrderPayUnifiedResponse;
 
 import java.math.BigDecimal;
 
@@ -36,6 +42,9 @@ public class ExecuteTest {
 
     }
 
+    /**
+     * 付款码支付
+     */
     private static void ApiHLOrderPayBarcodeTest() {
         ApiHLOrderPayBarcodeRequest request = new ApiHLOrderPayBarcodeRequest();
         request.setBusinessOrderNo(getThirdNo());
@@ -50,6 +59,9 @@ public class ExecuteTest {
         orderNo = response.getData().getOrderNo();
     }
 
+    /**
+     * 退款接口
+     */
     private static void ApiHLOrderRefundOperationTest() {
         ApiHLOrderRefundOperationRequest request = new ApiHLOrderRefundOperationRequest();
         request.setBusinessRefundNo(getThirdNo());
@@ -64,6 +76,9 @@ public class ExecuteTest {
         ResponseResultBase response = client.execute(request);
     }
 
+    /**
+     * 查询订单详情
+     */
     private static void ApiHLOrderPayDetailsTest() {
         ApiHLOrderPayDetailsRequest request = new ApiHLOrderPayDetailsRequest();
         request.setOrderNo(orderNo);
@@ -73,6 +88,9 @@ public class ExecuteTest {
 
     }
 
+    /**
+     * 预下单
+     */
     private static void ApiHLOrderPayUnifiedTest() {
         ApiHLOrderPayUnifiedRequest request = new ApiHLOrderPayUnifiedRequest();
         request.setBusinessOrderNo(getThirdNo());
@@ -87,6 +105,9 @@ public class ExecuteTest {
         orderNo = response.getData().getOrderNo();
     }
 
+    /**
+     * 订单关闭
+     */
     private static void ApiHLOrderCloseTest() {
         ApiHLOrderCloseRequest request = new ApiHLOrderCloseRequest();
         request.setMerchantNo(MERCHANTNO);
@@ -95,6 +116,9 @@ public class ExecuteTest {
         ResponseResultBase<ApiHLOrderCloseResponse> response = client.execute(request);
     }
 
+    /**
+     * 退款详情
+     */
     private static void ApiHLOrderRefundDetailsTest() {
         ApiHLOrderRefundDetailsRequest request = new ApiHLOrderRefundDetailsRequest();
         request.setMerchantNo(MERCHANTNO);
@@ -103,6 +127,9 @@ public class ExecuteTest {
         ResponseResultBase response = client.execute(request);
     }
 
+    /**
+     * 小程序支付接口
+     */
     private static void ApiHLOrderPayAppletTest() {
         ApiHLOrderPayAppletRequest request = new ApiHLOrderPayAppletRequest();
         request.setOperatorAccount(ACCOUNT);
@@ -120,6 +147,9 @@ public class ExecuteTest {
         assert response.success();
     }
 
+    /**
+     * 配置小程序AppId
+     */
     private static void ApiHLMerchantWxpayConfigTest(){
         ApiHLMerchantWxpayConfigRequest request = new ApiHLMerchantWxpayConfigRequest();
         request.setOperatorAccount(ACCOUNT);
@@ -132,6 +162,9 @@ public class ExecuteTest {
         assert response.success();
     }
 
+    /**
+     * 开通小程序支付
+     */
     private static void ApiHLMerchantSwitchChannelTest(){
         ApiHLMerchantSwitchChannelRequest request = new ApiHLMerchantSwitchChannelRequest();
         request.setOperatorAccount(ACCOUNT);

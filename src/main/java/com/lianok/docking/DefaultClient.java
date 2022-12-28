@@ -48,7 +48,9 @@ public class DefaultClient implements IDockingClient {
         lianOkRequest.setParams(JSONObject.toJSONString(request));
 
         try {
+            System.out.println(JSONObject.toJSONString(lianOkRequest));
             String responseContent = HttpUtil.doPost(url, JSONObject.toJSONString(lianOkRequest));
+            System.out.println(responseContent);
             ResponseResultBase<T> result = JSONObject.parseObject(responseContent, ResponseResultBase.class);
             if(result.success()) {
                 JSONObject jsonObject = JSONObject.parseObject(responseContent);

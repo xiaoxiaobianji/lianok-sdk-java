@@ -1,6 +1,7 @@
 package com.lianok.docking.enums;
 
 /**
+ * 支付类型枚举
  * @author linshu
  * @create 2022/11/1 11:43
  */
@@ -18,7 +19,7 @@ public enum PayWayEnum {
      */
     ALIPAY,
     /**
-     *
+     * 刷卡
      */
     UNION,
     /**

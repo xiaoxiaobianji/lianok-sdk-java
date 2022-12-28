@@ -1,6 +1,7 @@
 package com.lianok.docking.enums;
 
 /**
+ * 渠道枚举
  * @author linshu
  * @create 2022/11/1 11:37
  */
