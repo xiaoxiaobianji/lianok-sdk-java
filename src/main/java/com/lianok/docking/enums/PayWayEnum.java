@@ -1,58 +1,82 @@
 package com.lianok.docking.enums;
 
+import cn.hutool.core.util.StrUtil;
+
 /**
  * 支付类型枚举
- * @author linshu
- * @create 2022/11/1 11:43
  */
 public enum PayWayEnum {
+
     /**
      * 余额
      */
-    BALANCE,
+    BALANCE("balance"),
+
     /**
      * 微信
      */
-    WECHAT,
+    WECHAT("wechat"),
+
     /**
      * 支付宝
      */
-    ALIPAY,
+    ALIPAY("alipay"),
+
     /**
      * 刷卡
      */
-    UNION,
+    UNION("union"),
+
     /**
      * 云闪付
      */
-    CLOUD,
+    CLOUD("cloud"),
+
     /**
      * 数字人民币
      */
-    DCPAY,
+    DCPAY("dcpay"),
+
     /**
      * 现金
      */
-    CASH;
+    CASH("cash"),
+    /**
+     * 个人网银
+     */
+    PERSON_ONLINE_BANK("b2c_bank"),
+    /**
+     * 企业网银
+     */
+    CORPORATE_ONLINE_BANK("b2b_bank"),
+    /**
+     * 快捷支付
+     */
+    QUICK_PAY("quick_pay"),
+    ;
 
-    public static String getEnumValue(PayWayEnum payWayEnum){
-        switch (payWayEnum){
-            case BALANCE:
-                return "balance";
-            case WECHAT:
-                return "wechat";
-            case ALIPAY:
-                return "alipay";
-            case UNION:
-                return "union";
-            case CLOUD:
-                return "cloud";
-            case DCPAY:
-                return "dcpay";
-            case CASH:
-                return "cash";
-            default:
-                return null;
-        }
+    private final String payWay;
+
+
+    PayWayEnum(String payWay) {
+        this.payWay = payWay;
     }
+
+    public String getPayWay() {
+        return payWay;
+    }
+
+    public static PayWayEnum getPayWayEnum(String payWay) {
+        if (StrUtil.isBlank(payWay)) {
+            return null;
+        }
+        for (PayWayEnum value : values()) {
+            if (payWay.equals(value.getPayWay())) {
+                return value;
+            }
+        }
+        return null;
+    }
+
+
 }
