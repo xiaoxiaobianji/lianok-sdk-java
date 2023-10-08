@@ -4,7 +4,7 @@ import com.lianok.core.entity.DockingResponseBase;
 
 import java.math.BigDecimal;
 
-public class OrderPayDetailsResponse extends DockingResponseBase {
+public class ApiHlOrderPayDetailsResponse extends DockingResponseBase {
 
     private String orderNo;
     private String businessOrderNo;

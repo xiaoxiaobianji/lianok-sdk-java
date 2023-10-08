@@ -2,22 +2,12 @@ package com.lianok.docking.pay.request;
 
 import com.lianok.core.entity.DockingRequestBase;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.docking.pay.response.OrderRefundDetailsResponse;
+import com.lianok.docking.pay.response.ApiHlOrderRefundDetailsResponse;
 
 /**
  * 退款详情
  */
-public class OrderRefundDetailsRequest extends DockingRequestBase {
-
-    @Override
-    public String getResource() {
-        return "api.hl.order.refund.details";
-    }
-
-    @Override
-    public Class<? extends DockingResponseBase> getResponseClass() {
-        return OrderRefundDetailsResponse.class;
-    }
+public class ApiHlOrderRefundDetailsRequest extends DockingRequestBase {
 
     /**
      * 火脸退单号，
@@ -71,5 +61,15 @@ public class OrderRefundDetailsRequest extends DockingRequestBase {
 
     public void setMerchantNo(String merchantNo) {
         this.merchantNo = merchantNo;
+    }
+
+    @Override
+    public String getResource() {
+        return "api.hl.order.refund.details";
+    }
+
+    @Override
+    public Class<? extends DockingResponseBase> getResponseClass() {
+        return ApiHlOrderRefundDetailsResponse.class;
     }
 }

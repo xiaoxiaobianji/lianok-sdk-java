@@ -2,24 +2,14 @@ package com.lianok.docking.pay.request;
 
 import com.lianok.core.entity.DockingRequestBase;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.docking.pay.response.OrderPayBarcodeResponse;
+import com.lianok.docking.pay.response.ApiHlOrderPayBarcodeResponse;
 
 import java.math.BigDecimal;
 
 /**
  * 付款码支付
  */
-public class OrderPayBarcodeRequest extends DockingRequestBase {
-
-    @Override
-    public String getResource() {
-        return "api.hl.order.pay.barcode";
-    }
-
-    @Override
-    public Class<? extends DockingResponseBase> getResponseClass() {
-        return OrderPayBarcodeResponse.class;
-    }
+public class ApiHlOrderPayBarcodeRequest extends DockingRequestBase {
 
     /**
      * 消费者的付款码，
@@ -224,5 +214,15 @@ public class OrderPayBarcodeRequest extends DockingRequestBase {
 
     public void setShareMarkFlag(Integer shareMarkFlag) {
         this.shareMarkFlag = shareMarkFlag;
+    }
+
+    @Override
+    public String getResource() {
+        return "api.hl.order.pay.barcode";
+    }
+
+    @Override
+    public Class<? extends DockingResponseBase> getResponseClass() {
+        return ApiHlOrderPayBarcodeResponse.class;
     }
 }

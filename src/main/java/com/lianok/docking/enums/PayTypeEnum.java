@@ -1,6 +1,6 @@
 package com.lianok.docking.enums;
 
-import cn.hutool.core.util.StrUtil;
+import com.lianok.core.utils.StrUtils;
 
 /**
  * 支付方式枚举
@@ -43,7 +43,7 @@ public enum PayTypeEnum {
     }
 
     public static PayTypeEnum getPayTypeEnum(String type) {
-        if (StrUtil.isBlank(type)) {
+        if (StrUtils.isEmpty(type)) {
             return null;
         }
         for (PayTypeEnum value : values()) {

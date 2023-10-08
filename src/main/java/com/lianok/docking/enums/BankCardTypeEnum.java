@@ -1,10 +1,9 @@
 package com.lianok.docking.enums;
 
-import cn.hutool.core.util.StrUtil;
+import com.lianok.core.utils.StrUtils;
 
 /**
- * @author linshu
- * @create 2023/9/16 17:24
+ * 银行卡类型枚举
  */
 public enum BankCardTypeEnum {
 
@@ -30,7 +29,7 @@ public enum BankCardTypeEnum {
     }
 
     public static BankCardTypeEnum getCardTypeEnum(String cardType) {
-        if (StrUtil.isBlank(cardType)) {
+        if (StrUtils.isEmpty(cardType)) {
             return null;
         }
         for (BankCardTypeEnum value : values()) {

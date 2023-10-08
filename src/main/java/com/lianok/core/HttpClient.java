@@ -1,6 +1,5 @@
 package com.lianok.core;
 
-import cn.hutool.core.util.StrUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.lianok.core.config.AbstractConfig;
@@ -9,6 +8,7 @@ import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.core.entity.LianOkRequest;
 import com.lianok.core.entity.ResponseResultBase;
 import com.lianok.core.utils.HttpUtil;
+import com.lianok.core.utils.StrUtils;
 
 import java.lang.reflect.Type;
 import java.time.LocalDateTime;
@@ -24,7 +24,7 @@ public class HttpClient implements IDockingClient {
 
     @Override
     public <T extends DockingResponseBase> ResponseResultBase<T> execute(DockingRequestBase request) throws Exception {
-        if (StrUtil.isEmpty(request.getRequestTime())) {
+        if (StrUtils.isEmpty(request.getRequestTime())) {
             String requestTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
             request.setRequestTime(requestTime);
         }

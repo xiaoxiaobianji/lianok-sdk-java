@@ -1,8 +1,5 @@
 package com.lianok.core.utils;
 
-import cn.hutool.core.util.StrUtil;
-import cn.hutool.http.HttpStatus;
-
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -39,13 +36,13 @@ public final class HttpUtil {
             //设置参数类型
             connection.setRequestProperty("Content-Type", "application/json");
             //拼装参数
-            if (param != null && !param.equals(StrUtil.EMPTY)) {
+            if (param != null && !param.equals("")) {
                 //设置参数
                 os = connection.getOutputStream();
                 //拼装参数
                 os.write(param.getBytes(ENCODING));
             }
-            if (connection.getResponseCode() == HttpStatus.HTTP_OK) {
+            if (connection.getResponseCode() == 200) {
                 is = connection.getInputStream();
                 if (is != null) {
                     br = new BufferedReader(new InputStreamReader(is, ENCODING));

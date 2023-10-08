@@ -2,24 +2,14 @@ package com.lianok.docking.pay.request;
 
 import com.lianok.core.entity.DockingRequestBase;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.docking.pay.response.OrderPayUnifiedResponse;
+import com.lianok.docking.pay.response.ApiHlOrderPayUnifiedResponse;
 
 import java.math.BigDecimal;
 
 /**
  * 聚合支付
  */
-public class OrderPayUnifiedRequest extends DockingRequestBase {
-
-    @Override
-    public String getResource() {
-        return "api.hl.order.pay.unified";
-    }
-
-    @Override
-    public Class<? extends DockingResponseBase> getResponseClass() {
-        return OrderPayUnifiedResponse.class;
-    }
+public class ApiHlOrderPayUnifiedRequest extends DockingRequestBase {
 
     /**
      * 对接商系统订单号，
@@ -254,5 +244,15 @@ public class OrderPayUnifiedRequest extends DockingRequestBase {
 
     public void setCallBackUrl(String callBackUrl) {
         this.callBackUrl = callBackUrl;
+    }
+
+    @Override
+    public String getResource() {
+        return "api.hl.order.pay.unified";
+    }
+
+    @Override
+    public Class<? extends DockingResponseBase> getResponseClass() {
+        return ApiHlOrderPayUnifiedResponse.class;
     }
 }

@@ -1,10 +1,10 @@
 package com.lianok.core.config;
 
-import cn.hutool.crypto.SecureUtil;
 import com.lianok.core.emuns.EncryEnum;
 import com.lianok.core.emuns.EnvEnum;
 import com.lianok.core.entity.DockingRequestBase;
 import com.lianok.core.utils.CollectionUtils;
+import com.lianok.core.utils.SecurityUtils;
 
 import java.util.Map;
 import java.util.Objects;
@@ -49,7 +49,7 @@ public final class Md5Config extends AbstractConfig {
         String strParams = CollectionUtils.mapToStr(paramsMap);
         strParams = strParams.toLowerCase();
         strParams = strParams + "&" + getKey();
-        return SecureUtil.md5(strParams);
+        return SecurityUtils.md5(strParams);
     }
 
 }

@@ -2,7 +2,7 @@ package com.lianok.docking.pay.response;
 
 import com.lianok.core.entity.DockingResponseBase;
 
-public class OrderPayUnifiedResponse extends DockingResponseBase {
+public class ApiHlOrderPayUnifiedResponse extends DockingResponseBase {
 
     private String orderNo;
     private String businessOrderNo;

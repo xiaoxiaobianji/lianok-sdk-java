@@ -1,6 +1,6 @@
 package com.lianok.docking.enums;
 
-import cn.hutool.core.util.StrUtil;
+import com.lianok.core.utils.StrUtils;
 
 /**
  * 渠道枚举
@@ -60,7 +60,7 @@ public enum ChannelEnum {
     }
 
     public static ChannelEnum getChannelEnum(String channelCode) {
-        if (StrUtil.isBlank(channelCode)) {
+        if (StrUtils.isEmpty(channelCode)) {
             return null;
         }
         for (ChannelEnum value : values()) {

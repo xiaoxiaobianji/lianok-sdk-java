@@ -4,7 +4,7 @@ import com.lianok.core.entity.DockingResponseBase;
 
 import java.math.BigDecimal;
 
-public class OrderRefundOperationResponse extends DockingResponseBase {
+public class ApiHlOrderRefundDetailsResponse extends DockingResponseBase {
 
     private String orderNo;
     private String refundNo;
@@ -13,10 +13,14 @@ public class OrderRefundOperationResponse extends DockingResponseBase {
     private BigDecimal refundAmount;
     private String refundTime;
     private Integer refundStatus;
+    private String payWay;
     private String remark;
     private String merchantNo;
     private String cashierNo;
     private String deviceNo;
+    private String channelRefundNo;
+    private BigDecimal serviceFee;
+    private BigDecimal benefitAmount;
 
     public String getOrderNo() {
         return orderNo;
@@ -74,6 +78,14 @@ public class OrderRefundOperationResponse extends DockingResponseBase {
         this.refundStatus = refundStatus;
     }
 
+    public String getPayWay() {
+        return payWay;
+    }
+
+    public void setPayWay(String payWay) {
+        this.payWay = payWay;
+    }
+
     public String getRemark() {
         return remark;
     }
@@ -104,5 +116,29 @@ public class OrderRefundOperationResponse extends DockingResponseBase {
 
     public void setDeviceNo(String deviceNo) {
         this.deviceNo = deviceNo;
+    }
+
+    public String getChannelRefundNo() {
+        return channelRefundNo;
+    }
+
+    public void setChannelRefundNo(String channelRefundNo) {
+        this.channelRefundNo = channelRefundNo;
+    }
+
+    public BigDecimal getServiceFee() {
+        return serviceFee;
+    }
+
+    public void setServiceFee(BigDecimal serviceFee) {
+        this.serviceFee = serviceFee;
+    }
+
+    public BigDecimal getBenefitAmount() {
+        return benefitAmount;
+    }
+
+    public void setBenefitAmount(BigDecimal benefitAmount) {
+        this.benefitAmount = benefitAmount;
     }
 }

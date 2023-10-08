@@ -2,24 +2,14 @@ package com.lianok.docking.pay.request;
 
 import com.lianok.core.entity.DockingRequestBase;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.docking.pay.response.OrderRefundOperationResponse;
+import com.lianok.docking.pay.response.ApiHlOrderRefundOperationResponse;
 
 import java.math.BigDecimal;
 
 /**
  * 退款接口
  */
-public class OrderRefundOperationRequest extends DockingRequestBase {
-
-    @Override
-    public String getResource() {
-        return "api.hl.order.refund.operation";
-    }
-
-    @Override
-    public Class<? extends DockingResponseBase> getResponseClass() {
-        return OrderRefundOperationResponse.class;
-    }
+public class ApiHlOrderRefundOperationRequest extends DockingRequestBase {
 
     /**
      * 火脸订单号，
@@ -161,5 +151,15 @@ public class OrderRefundOperationRequest extends DockingRequestBase {
 
     public void setNotifyUrl(String notifyUrl) {
         this.notifyUrl = notifyUrl;
+    }
+
+    @Override
+    public String getResource() {
+        return "api.hl.order.refund.operation";
+    }
+
+    @Override
+    public Class<? extends DockingResponseBase> getResponseClass() {
+        return ApiHlOrderRefundOperationResponse.class;
     }
 }
