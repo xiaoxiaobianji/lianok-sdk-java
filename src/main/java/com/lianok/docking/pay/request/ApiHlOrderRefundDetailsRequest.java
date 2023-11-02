@@ -1,13 +1,13 @@
 package com.lianok.docking.pay.request;
 
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.pay.response.ApiHlOrderRefundDetailsResponse;
 
 /**
  * 退款详情
  */
-public class ApiHlOrderRefundDetailsRequest extends DockingRequestBase {
+public class ApiHlOrderRefundDetailsRequest extends AbstractDockingRequest {
 
     /**
      * 火脸退单号，

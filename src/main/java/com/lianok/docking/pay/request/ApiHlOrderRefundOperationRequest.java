@@ -1,6 +1,6 @@
 package com.lianok.docking.pay.request;
 
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.pay.response.ApiHlOrderRefundOperationResponse;
 
@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 /**
  * 退款接口
  */
-public class ApiHlOrderRefundOperationRequest extends DockingRequestBase {
+public class ApiHlOrderRefundOperationRequest extends AbstractDockingRequest {
 
     /**
      * 火脸订单号，
@@ -64,6 +64,9 @@ public class ApiHlOrderRefundOperationRequest extends DockingRequestBase {
      * 异步通知地址
      */
     private String notifyUrl;
+
+    private Integer shareRefundMode;
+    private String refundDetails;
 
     public String getOrderNo() {
         return orderNo;

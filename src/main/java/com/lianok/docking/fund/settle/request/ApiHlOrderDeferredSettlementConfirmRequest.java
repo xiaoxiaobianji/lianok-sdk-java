@@ -1,20 +1,41 @@
 package com.lianok.docking.fund.settle.request;
 
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.fund.settle.response.ApiHlOrderDeferredSettlementConfirmResponse;
+
+import java.math.BigDecimal;
 
 /**
  * 延时结算确认
  */
-public class ApiHlOrderDeferredSettlementConfirmRequest extends DockingRequestBase {
+public class ApiHlOrderDeferredSettlementConfirmRequest extends AbstractDockingRequest {
 
+    /**
+     * 商户ID
+     */
     private String merchantNo;
+    /**
+     * 操作者账号
+     */
     private String operatorAccount;
+    /**
+     * 火脸订单号
+     * 火脸订单号可在火脸服务商后台-订单管理-交易流水或商家后台-订单管理-交易流水中查看。
+     */
     private String orderNo;
+    /**
+     * 对接商系统订单号
+     */
     private String businessOrderNo;
+    /**
+     * 渠道订单号
+     */
     private String channelOrderNo;
-    private String deferredAmount;
+    /**
+     * 延时结算确认金额
+     */
+    private BigDecimal deferredAmount;
 
     public String getMerchantNo() {
         return merchantNo;
@@ -56,11 +77,11 @@ public class ApiHlOrderDeferredSettlementConfirmRequest extends DockingRequestBa
         this.channelOrderNo = channelOrderNo;
     }
 
-    public String getDeferredAmount() {
+    public BigDecimal getDeferredAmount() {
         return deferredAmount;
     }
 
-    public void setDeferredAmount(String deferredAmount) {
+    public void setDeferredAmount(BigDecimal deferredAmount) {
         this.deferredAmount = deferredAmount;
     }
 

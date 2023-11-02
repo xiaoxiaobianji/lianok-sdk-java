@@ -1,14 +1,13 @@
 package com.lianok.docking.bill.request;
 
-import com.alibaba.fastjson.annotation.JSONField;
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.bill.response.ApiHlOrderAccountStatementApplyResponse;
 
 /**
  * 对账单申请
  */
-public class ApiHlOrderAccountStatementApplyReuqest extends DockingRequestBase {
+public class ApiHlOrderAccountStatementApplyReuqest extends AbstractDockingRequest {
 
     @Override
     public String getResource() {
@@ -24,7 +23,6 @@ public class ApiHlOrderAccountStatementApplyReuqest extends DockingRequestBase {
      * 下载对账日期
      * 格式：yyyy-MM-dd
      */
-    @JSONField(name = "billDate")
     private String billDate;
     /**
      * 下载类型
@@ -36,12 +34,10 @@ public class ApiHlOrderAccountStatementApplyReuqest extends DockingRequestBase {
      * 6：延时结算确认订单明细
      * 7：延时结算退款订单明细
      */
-    @JSONField(name = "downType")
-    private int downType2;
+    private int downType;
     /**
      * 商户号
      */
-    @JSONField(name = "merchantNo")
     private String merchantNo;
 
 
@@ -54,11 +50,11 @@ public class ApiHlOrderAccountStatementApplyReuqest extends DockingRequestBase {
     }
 
     public int getDownType() {
-        return downType2;
+        return downType;
     }
 
     public void setDownType(int downType) {
-        this.downType2 = downType;
+        this.downType = downType;
     }
 
     public String getMerchantNo() {

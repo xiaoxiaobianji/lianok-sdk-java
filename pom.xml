@@ -31,8 +31,6 @@
             <version>1.2.78</version>
         </dependency>
     </dependencies>
-
-
     <profiles>
         <profile>
             <id>test</id>

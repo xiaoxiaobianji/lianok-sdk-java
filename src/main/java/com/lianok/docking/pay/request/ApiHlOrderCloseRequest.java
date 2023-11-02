@@ -1,13 +1,14 @@
 package com.lianok.docking.pay.request;
 
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.pay.response.ApiHlOrderCloseResponse;
 
 /**
  * 订单关闭
+ * 对接商可根据此接口对‘待支付、支付中’状态订单进行关闭订单操作
  */
-public class ApiHlOrderCloseRequest extends DockingRequestBase {
+public class ApiHlOrderCloseRequest extends AbstractDockingRequest {
 
     /**
      * 火脸订单号

@@ -1,14 +1,14 @@
 package com.lianok.docking.upload.request;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.upload.response.ApiHlShopUploadImageResponse;
 
 /**
  * 图片上传
  */
-public class ApiHlShopUploadImageRequest extends DockingRequestBase {
+public class ApiHlShopUploadImageRequest extends AbstractDockingRequest {
 
     @JSONField(serialize = false)
     private String fileName;

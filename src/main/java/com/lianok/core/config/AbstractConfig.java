@@ -1,8 +1,11 @@
 package com.lianok.core.config;
 
 import com.lianok.core.emuns.EnvEnum;
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 
+/**
+ * 抽象配置类
+ */
 public abstract class AbstractConfig {
 
     private final String url;
@@ -22,10 +25,14 @@ public abstract class AbstractConfig {
     private final String authCode;
     private final String key;
 
-    protected AbstractConfig(String url, String authCode, String key) {
+    private AbstractConfig(String url, String authCode, String key) {
         this.url = url;
         this.authCode = authCode;
         this.key = key;
+    }
+
+    protected AbstractConfig(String authCode, String key) {
+        this(EnvEnum.PUBLISH, authCode, key);
     }
 
     protected AbstractConfig(EnvEnum env, String authCode, String key) {
@@ -52,7 +59,6 @@ public abstract class AbstractConfig {
      * @param request 请求对象
      * @return 签名sign
      */
-    public abstract String encrypt(DockingRequestBase request);
-
+    public abstract String encrypt(AbstractDockingRequest request);
 
 }

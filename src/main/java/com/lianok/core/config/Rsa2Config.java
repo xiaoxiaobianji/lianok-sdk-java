@@ -2,7 +2,7 @@ package com.lianok.core.config;
 
 import com.lianok.core.emuns.EncryEnum;
 import com.lianok.core.emuns.EnvEnum;
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 
 import java.util.Objects;
 
@@ -33,7 +33,7 @@ public final class Rsa2Config extends AbstractConfig {
     }
 
     @Override
-    public String encrypt(DockingRequestBase request) {
+    public String encrypt(AbstractDockingRequest request) {
         throw new RuntimeException("未实现");
     }
 }

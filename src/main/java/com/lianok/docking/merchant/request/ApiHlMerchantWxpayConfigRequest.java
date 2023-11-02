@@ -1,7 +1,7 @@
 package com.lianok.docking.merchant.request;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.merchant.response.ApiHlMerchantWxpayConfigResponse;
 
@@ -9,7 +9,7 @@ import com.lianok.docking.merchant.response.ApiHlMerchantWxpayConfigResponse;
  * 配置小程序AppId
  * 第一次使用微信小程序支付时需要和同主体商户做绑定关系
  */
-public class ApiHlMerchantWxpayConfigRequest extends DockingRequestBase {
+public class ApiHlMerchantWxpayConfigRequest extends AbstractDockingRequest {
 
     /**
      * 商户ID

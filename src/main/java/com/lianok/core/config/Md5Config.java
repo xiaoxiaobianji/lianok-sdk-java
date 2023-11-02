@@ -2,7 +2,7 @@ package com.lianok.core.config;
 
 import com.lianok.core.emuns.EncryEnum;
 import com.lianok.core.emuns.EnvEnum;
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.utils.CollectionUtils;
 import com.lianok.core.utils.SecurityUtils;
 
@@ -43,7 +43,7 @@ public final class Md5Config extends AbstractConfig {
     }
 
     @Override
-    public String encrypt(DockingRequestBase request) {
+    public String encrypt(AbstractDockingRequest request) {
         Map<String, Object> paramsMap = new TreeMap(request.getParams());
         paramsMap.put("authCode", getAuthCode());
         paramsMap.put("resource", request.getResource());

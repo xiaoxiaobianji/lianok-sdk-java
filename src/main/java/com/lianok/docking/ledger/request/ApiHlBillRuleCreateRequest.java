@@ -1,6 +1,6 @@
 package com.lianok.docking.ledger.request;
 
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.ledger.response.ApiHlBillRuleCreateResponse;
 
@@ -8,15 +8,30 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
- * 分账规则新增
+ * 自动分账规则修改
  */
-public class ApiHlBillRuleCreateRequest extends DockingRequestBase {
+public class ApiHlBillRuleCreateRequest extends AbstractDockingRequest {
 
-    private Integer id;
+    /**
+     * 分账方商户ID
+     */
     private String merchantNo;
+    /**
+     * 通道标识
+     * com.lianok.docking.enums.ChannelEnum
+     */
     private String channelCode;
+    /**
+     * 分账接收方商户ID
+     */
     private String receiveMerchantNo;
+    /**
+     * 分账接收方通道标识
+     */
     private String receiveChannelCode;
+    /**
+     * 分账比例
+     */
     private Integer sharePercent;
     /**
      * 有效期规则: 分账规则生效日期
@@ -27,7 +42,7 @@ public class ApiHlBillRuleCreateRequest extends DockingRequestBase {
      */
     private java.time.LocalDateTime ruleExpiredDate;
     /**
-     * 分账接收方规则使用状态: 0=禁用 1=启用 参见 AbleFlagEnum
+     * 分账接收方规则使用状态: 0=禁用 1=启用
      */
     private Integer shareRuleStatus;
     /**
@@ -38,14 +53,6 @@ public class ApiHlBillRuleCreateRequest extends DockingRequestBase {
      * 金额规则: 月累计最大可分账金额, 默认值0标识不校验月最大分账金额
      */
     private BigDecimal maxMonthShareAmount;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getMerchantNo() {
         return merchantNo;
@@ -107,11 +114,6 @@ public class ApiHlBillRuleCreateRequest extends DockingRequestBase {
         return shareRuleStatus;
     }
 
-    /**
-     * 分账接收方规则使用状态 (说明:0=禁用 1=启用)
-     *
-     * @param shareRuleStatus
-     */
     public void setShareRuleStatus(Integer shareRuleStatus) {
         this.shareRuleStatus = shareRuleStatus;
     }

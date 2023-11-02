@@ -1,20 +1,38 @@
 package com.lianok.docking.fund.settle.request;
 
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.fund.settle.response.ApiHlOrderDeferredSettlementRevokeResponse;
 
 /**
  * 延时结算交易撤销
  */
-public class ApiHlOrderDeferredSettlementRevokeRequest extends DockingRequestBase {
+public class ApiHlOrderDeferredSettlementRevokeRequest extends AbstractDockingRequest {
 
+    /**
+     * 商户ID
+     */
     private String merchantNo;
+    /**
+     * 操作者账号
+     */
     private String operatorAccount;
+    /**
+     * 火脸订单号
+     */
     private String orderNo;
+    /**
+     * 对接商系统订单号
+     */
     private String businessOrderNo;
+    /**
+     * 渠道订单号
+     */
     private String channelOrderNo;
-    private String deferredAmount;
+    /**
+     * 延时结算完成订单号
+     */
+    private String deferredOrderNo;
 
     public String getMerchantNo() {
         return merchantNo;
@@ -56,12 +74,12 @@ public class ApiHlOrderDeferredSettlementRevokeRequest extends DockingRequestBas
         this.channelOrderNo = channelOrderNo;
     }
 
-    public String getDeferredAmount() {
-        return deferredAmount;
+    public String getDeferredOrderNo() {
+        return deferredOrderNo;
     }
 
-    public void setDeferredAmount(String deferredAmount) {
-        this.deferredAmount = deferredAmount;
+    public void setDeferredOrderNo(String deferredOrderNo) {
+        this.deferredOrderNo = deferredOrderNo;
     }
 
     @Override

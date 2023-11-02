@@ -1,6 +1,6 @@
 package com.lianok.docking.ledger.request;
 
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.ledger.response.ApiHlBillRuleUpdateResponse;
 
@@ -10,9 +10,23 @@ import java.time.LocalDateTime;
 /**
  * 分账规则修改
  */
-public class ApiHlBillRuleUpdateRequest extends DockingRequestBase {
+public class ApiHlBillRuleUpdateRequest extends AbstractDockingRequest {
 
+    /**
+     * 分账规则编号
+     */
     private Long id;
+    /**
+     * 分账方商户编号
+     */
+    private String merchantNo;
+    /**
+     * 分账接收方商户ID
+     */
+    private String receiveMerchantNo;
+    /**
+     * 分账比例
+     */
     private Integer sharePercent;
     /**
      * 有效期规则: 分账规则生效日期

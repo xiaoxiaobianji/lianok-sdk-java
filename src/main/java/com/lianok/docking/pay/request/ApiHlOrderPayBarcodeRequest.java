@@ -1,6 +1,6 @@
 package com.lianok.docking.pay.request;
 
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.pay.response.ApiHlOrderPayBarcodeResponse;
 
@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 /**
  * 付款码支付
  */
-public class ApiHlOrderPayBarcodeRequest extends DockingRequestBase {
+public class ApiHlOrderPayBarcodeRequest extends AbstractDockingRequest {
 
     /**
      * 消费者的付款码，

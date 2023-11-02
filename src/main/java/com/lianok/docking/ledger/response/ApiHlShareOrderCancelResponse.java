@@ -2,10 +2,7 @@ package com.lianok.docking.ledger.response;
 
 import com.lianok.core.entity.DockingResponseBase;
 
-/**
- * 订单分账撤销
- */
-public class ApiHlBillOrderCancelResponse extends DockingResponseBase {
+public class ApiHlShareOrderCancelResponse extends DockingResponseBase {
 
     private String merchantNo;
     private String shareNo;

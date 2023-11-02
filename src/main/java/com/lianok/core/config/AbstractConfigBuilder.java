@@ -14,6 +14,11 @@ public abstract class AbstractConfigBuilder<T extends AbstractConfigBuilder<T>> 
     protected AbstractConfigBuilder() {
     }
 
+    /**
+     * 配置构建器
+     *
+     * @return
+     */
     protected abstract T self();
 
     public T authCode(String authCode) {

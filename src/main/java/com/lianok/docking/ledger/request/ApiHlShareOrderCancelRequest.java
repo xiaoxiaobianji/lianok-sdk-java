@@ -2,22 +2,29 @@ package com.lianok.docking.ledger.request;
 
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.docking.ledger.response.ApiHlBillRuleQueryResponse;
+import com.lianok.docking.ledger.response.ApiHlShareOrderCancelResponse;
 
 /**
- * 分账规则查询
+ * 分账取消
  */
-public class ApiHlBillRuleQueryRequest extends AbstractDockingRequest {
+public class ApiHlShareOrderCancelRequest extends AbstractDockingRequest {
 
     /**
-     * 分账方商户ID
+     * 商户编号
      */
     private String merchantNo;
     /**
-     * 通道标识
-     * com.lianok.docking.enums.ChannelEnum
+     * 渠道编号
      */
     private String channelCode;
+    /**
+     * 对接商分账单号
+     */
+    private String billNo;
+    /**
+     * 火脸分账账单编号
+     */
+    private Long shareNo;
 
     public String getMerchantNo() {
         return merchantNo;
@@ -35,13 +42,30 @@ public class ApiHlBillRuleQueryRequest extends AbstractDockingRequest {
         this.channelCode = channelCode;
     }
 
+    public String getBillNo() {
+        return billNo;
+    }
+
+    public void setBillNo(String billNo) {
+        this.billNo = billNo;
+    }
+
+    public Long getShareNo() {
+        return shareNo;
+    }
+
+    public void setShareNo(Long shareNo) {
+        this.shareNo = shareNo;
+    }
+
+
     @Override
     public String getResource() {
-        return "api.hl.bill.rule.query";
+        return "api.hl.share.order.cancel";
     }
 
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
-        return ApiHlBillRuleQueryResponse.class;
+        return ApiHlShareOrderCancelResponse.class;
     }
 }

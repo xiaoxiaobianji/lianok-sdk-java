@@ -1,15 +1,22 @@
 package com.lianok.docking.ledger.request;
 
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.ledger.response.ApiHlBillSetResponse;
 
 /**
  * 自动分账开通
  */
-public class ApiHlBillSetRequest extends DockingRequestBase {
+public class ApiHlBillSetRequest extends AbstractDockingRequest {
 
+    /**
+     * 分账方商户ID
+     */
     private String merchantNo;
+    /**
+     * 通道标识
+     * com.lianok.docking.enums.ChannelEnum
+     */
     private String channelCode;
     /**
      * 分账模式  0=手动分账 1=自动分账

@@ -1,26 +1,27 @@
 package com.lianok.docking.ledger.request;
 
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.ledger.response.ApiHlBillContractAccreditQueryResponse;
 
 /**
  * 分账开通查询
  */
-public class ApiHlBillContractAccreditQueryRequest extends DockingRequestBase {
+public class ApiHlBillContractAccreditQueryRequest extends AbstractDockingRequest {
 
+    /**
+     * 商户编号
+     */
     private String merchantNo;
+    /**
+     * 渠道编号
+     */
     private String channelCode;
 
     public String getMerchantNo() {
         return merchantNo;
     }
 
-    /**
-     * 商户编号
-     *
-     * @param merchantNo
-     */
     public void setMerchantNo(String merchantNo) {
         this.merchantNo = merchantNo;
     }
@@ -29,11 +30,6 @@ public class ApiHlBillContractAccreditQueryRequest extends DockingRequestBase {
         return channelCode;
     }
 
-    /**
-     * 渠道编号
-     *
-     * @param channelCode
-     */
     public void setChannelCode(String channelCode) {
         this.channelCode = channelCode;
     }

@@ -2,17 +2,16 @@ package com.lianok.docking.ledger.request;
 
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.docking.ledger.response.ApiHlBillRuleQueryResponse;
+import com.lianok.docking.ledger.response.ApiHlBillAccountBalanceQueryResponse;
 
-/**
- * 分账规则查询
- */
-public class ApiHlBillRuleQueryRequest extends AbstractDockingRequest {
+public class ApiHlBillAccountBalanceQueryRequest extends AbstractDockingRequest {
 
     /**
-     * 分账方商户ID
+     * 商户ID
+     * 火脸商户ID，在火脸服务商后台-商户列表或商家后台-门店列表，可查看该字段
      */
     private String merchantNo;
+
     /**
      * 通道标识
      * com.lianok.docking.enums.ChannelEnum
@@ -37,11 +36,11 @@ public class ApiHlBillRuleQueryRequest extends AbstractDockingRequest {
 
     @Override
     public String getResource() {
-        return "api.hl.bill.rule.query";
+        return "api.hl.bill.account.balance.query";
     }
 
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
-        return ApiHlBillRuleQueryResponse.class;
+        return ApiHlBillAccountBalanceQueryResponse.class;
     }
 }

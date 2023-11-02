@@ -3,7 +3,7 @@ package com.lianok.core;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.lianok.core.config.AbstractConfig;
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.core.entity.LianOkRequest;
 import com.lianok.core.entity.ResponseResultBase;
@@ -26,7 +26,7 @@ public class HttpClient implements IDockingClient {
     }
 
     @Override
-    public <T extends DockingResponseBase> ResponseResultBase<T> execute(DockingRequestBase request) throws Exception {
+    public <T extends DockingResponseBase> ResponseResultBase<T> execute(AbstractDockingRequest request) throws Exception {
         if (StrUtils.isEmpty(request.getRequestTime())) {
             String requestTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
             request.setRequestTime(requestTime);

@@ -44,13 +44,14 @@ public final class HttpUtil {
             //设置参数类型
             connection.setRequestProperty("Content-Type", "application/json");
             //拼装参数
-            if (param != null && !param.equals("")) {
+            if (param != null && !"".equals(param)) {
                 //设置参数
                 os = connection.getOutputStream();
                 //拼装参数
                 os.write(param.getBytes(ENCODING));
             }
-            if (connection.getResponseCode() == 200) {
+            int httpStateOk = 200;
+            if (connection.getResponseCode() == httpStateOk) {
                 is = connection.getInputStream();
                 if (is != null) {
                     br = new BufferedReader(new InputStreamReader(is, ENCODING));

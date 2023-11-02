@@ -3,7 +3,7 @@ package com.lianok.docking;
 import com.lianok.core.config.AbstractConfig;
 import com.lianok.core.ClientBuilder;
 import com.lianok.core.IDockingClient;
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.core.entity.ResponseResultBase;
 
@@ -37,7 +37,7 @@ public class LianokService {
         }
     }
 
-    public <T extends DockingResponseBase> ResponseResultBase<T> execute(DockingRequestBase request) throws Exception {
+    public <T extends DockingResponseBase> ResponseResultBase<T> execute(AbstractDockingRequest request) throws Exception {
         return client.execute(request);
     }
 }

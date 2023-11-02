@@ -1,7 +1,7 @@
 package com.lianok.docking.pay.request;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.pay.response.ApiHlOrderPayAppletResponse;
 
@@ -11,7 +11,7 @@ import java.math.BigDecimal;
  * 小程序支付接口
  * 通过接口可以获取微信/支付宝小程序支付需要的TradeNo/JSPayInfo
  */
-public class ApiHlOrderPayAppletRequest extends DockingRequestBase {
+public class ApiHlOrderPayAppletRequest extends AbstractDockingRequest {
 
     /**
      * 商户ID

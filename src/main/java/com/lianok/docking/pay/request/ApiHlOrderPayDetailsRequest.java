@@ -1,13 +1,13 @@
 package com.lianok.docking.pay.request;
 
-import com.lianok.core.entity.DockingRequestBase;
+import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.pay.response.ApiHlOrderPayDetailsResponse;
 
 /**
  * 订单详情
  */
-public class ApiHlOrderPayDetailsRequest extends DockingRequestBase {
+public class ApiHlOrderPayDetailsRequest extends AbstractDockingRequest {
 
     /**
      * 火脸订单号，

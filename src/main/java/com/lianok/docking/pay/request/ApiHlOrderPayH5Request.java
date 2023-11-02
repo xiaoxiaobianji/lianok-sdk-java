@@ -2,21 +2,24 @@ package com.lianok.docking.pay.request;
 
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.docking.pay.response.ApiHlOrderPayBankResponse;
+import com.lianok.docking.pay.response.ApiHlOrderPayH5Response;
 
 import java.math.BigDecimal;
 
 /**
- * 银行卡支付
+ * H5预下单
+ * 适用于用户选择支付方式(微信或支付宝)完成下单操作后跳转到H5页面完成支付的场景。
  */
-public class ApiHlOrderPayBankRequest extends AbstractDockingRequest {
+public class ApiHlOrderPayH5Request extends AbstractDockingRequest {
 
     /**
-     * 对接商系统订单号
+     * 对接商系统订单号，
+     * 由对接商自行定义规范，最大长度不超过64
      */
     private String businessOrderNo;
     /**
-     * 订单支付金额
+     * 订单支付金额，
+     * 单位为元，精确到0.01
      */
     private BigDecimal payAmount;
     /**
@@ -24,17 +27,15 @@ public class ApiHlOrderPayBankRequest extends AbstractDockingRequest {
      */
     private String remark;
     /**
-     * 商户ID
+     * 商户ID，
+     * 火脸商户ID，在火脸服务商后台-商户列表或商家后台-门店列表，可查看该字段
      */
     private String merchantNo;
     /**
-     * 操作者账号
+     * 操作者账号，
+     * 收银员手机号。手机号一般为商户注册火脸时的手机号。在火脸商户后台员工管理中，可配置收银员，收银员登陆支持手机号登陆。可在商户后台-员工管理中查看所有收银员的手机号。
      */
     private String operatorAccount;
-    /**
-     * 收银设备ID
-     */
-    private String deviceNo;
     /**
      * 异步通知地址
      */
@@ -45,33 +46,16 @@ public class ApiHlOrderPayBankRequest extends AbstractDockingRequest {
     private String subject;
     /**
      * 支付方式
-     * 枚举：com.lianok.docking.enums.PayWayEnum
-     * <p>
-     * 支持的类型，b2c_bank，b2b_bank，quick_pay
+     * com.lianok.docking.enums.PayWayEnum
      */
     private String payWay;
-    /**
-     * 银行卡绑定的手机号
-     */
-    private String phone;
-    /**
-     * 订单失效时间
-     */
-    private Integer payExpireTime;
     /**
      * 支付成功页面跳转地址
      */
     private String pageNotifyUrl;
-    /**
-     * 银行卡信息
-     * {\"bankCardNo\":\"4666********8888\",\"cardName\":\"张三\",\"idCardNo\":\"110011***********3\",\"mobilePhoneNo\":\"182********\"}
-     */
-    private String bankCard;
-    /**
-     * 银行卡类型
-     * 枚举：com.lianok.docking.enums.BankCardTypeEnum
-     */
-    private String cardType;
+
+    private String itemAmount;
+    private String itemQuantity;
 
     public String getBusinessOrderNo() {
         return businessOrderNo;
@@ -113,14 +97,6 @@ public class ApiHlOrderPayBankRequest extends AbstractDockingRequest {
         this.operatorAccount = operatorAccount;
     }
 
-    public String getDeviceNo() {
-        return deviceNo;
-    }
-
-    public void setDeviceNo(String deviceNo) {
-        this.deviceNo = deviceNo;
-    }
-
     public String getNotifyUrl() {
         return notifyUrl;
     }
@@ -145,22 +121,6 @@ public class ApiHlOrderPayBankRequest extends AbstractDockingRequest {
         this.payWay = payWay;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public Integer getPayExpireTime() {
-        return payExpireTime;
-    }
-
-    public void setPayExpireTime(Integer payExpireTime) {
-        this.payExpireTime = payExpireTime;
-    }
-
     public String getPageNotifyUrl() {
         return pageNotifyUrl;
     }
@@ -169,29 +129,29 @@ public class ApiHlOrderPayBankRequest extends AbstractDockingRequest {
         this.pageNotifyUrl = pageNotifyUrl;
     }
 
-    public String getBankCard() {
-        return bankCard;
+    public String getItemAmount() {
+        return itemAmount;
     }
 
-    public void setBankCard(String bankCard) {
-        this.bankCard = bankCard;
+    public void setItemAmount(String itemAmount) {
+        this.itemAmount = itemAmount;
     }
 
-    public String getCardType() {
-        return cardType;
+    public String getItemQuantity() {
+        return itemQuantity;
     }
 
-    public void setCardType(String cardType) {
-        this.cardType = cardType;
+    public void setItemQuantity(String itemQuantity) {
+        this.itemQuantity = itemQuantity;
     }
 
     @Override
     public String getResource() {
-        return "api.hl.order.pay.bank";
+        return "api.hl.order.pay.h5";
     }
 
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
-        return ApiHlOrderPayBankResponse.class;
+        return ApiHlOrderPayH5Response.class;
     }
 }

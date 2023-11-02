@@ -11,10 +11,12 @@ import java.util.Map;
 /**
  * 请求对象基类
  */
-public abstract class DockingRequestBase implements IDockingRequest {
+public abstract class AbstractDockingRequest implements IDockingRequest {
 
     /**
-     * 接口名称
+     * 具体业务的接口名称
+     *
+     * @return 开放平台资源名称
      */
     public abstract String getResource();
 
@@ -59,7 +61,7 @@ public abstract class DockingRequestBase implements IDockingRequest {
     @Override
     public Map<String, Object> getParams() {
         Map<String, Object> map = new HashMap<>();
-        Class<? extends DockingRequestBase> aClass = getClass();
+        Class<? extends AbstractDockingRequest> aClass = getClass();
         Field[] declaredFields = aClass.getDeclaredFields();
         for (Field declaredField : declaredFields) {
             JSONField field = declaredField.getAnnotation(JSONField.class);
