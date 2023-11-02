@@ -30,7 +30,10 @@ public final class Md5Config extends AbstractConfig {
             return this;
         }
 
-        public Builder config(AbstractConfig config) {
+        public Builder config(EnvEnum env, String authCode, String key) {
+            this.env = env;
+            this.authCode = authCode;
+            this.key = key;
             return this;
         }
 

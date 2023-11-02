@@ -2,6 +2,7 @@ package com.lianok.core.entity;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import com.lianok.core.IDockingRequest;
+import com.lianok.core.utils.StrUtils;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
@@ -63,7 +64,16 @@ public abstract class DockingRequestBase implements IDockingRequest {
         for (Field declaredField : declaredFields) {
             JSONField field = declaredField.getAnnotation(JSONField.class);
             declaredField.setAccessible(true);
-            String fieldName = field == null ? declaredField.getName() : field.name();
+            String fieldName = "";
+            if (field != null) {
+                fieldName = field.name();
+                if (!field.serialize()) {
+                    continue;
+                }
+            }
+            if (StrUtils.isEmpty(fieldName)) {
+                fieldName = declaredField.getName();
+            }
             Object fieldValue = null;
             try {
                 fieldValue = declaredField.get(this);
