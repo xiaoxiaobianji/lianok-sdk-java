@@ -1,58 +1,73 @@
 package com.lianok.docking.enums;
 
+import com.lianok.core.utils.StrUtils;
+
 /**
  * 渠道枚举
- * @author linshu
- * @create 2022/11/1 11:37
  */
 public enum ChannelEnum {
-    /**
-     * 乐刷
-     */
-    LESHUA,
-    /**
-     * 乐刷线上
-     */
-    LESHUAONLINE,
+
     /**
      * 支付宝
      */
-    ALIPAY,
+    ALIPAY("alipay"),
     /**
      * 微信
      */
-    WECHAT,
+    WECHAT("wechat"),
+    /**
+     * 乐刷
+     */
+    LESHUA("leShua"),
+    /**
+     * 乐刷线上
+     */
+    LESHUAONLINE("leShuaOnline"),
     /**
      * 银盛
      */
-    YSEPAY,
+    YSEPAY("ysepay"),
     /**
      * 随行付
      */
-    SUIXINGFU,
+    SUIXINGFU("suiXingFu"),
     /**
      * 合利宝
      */
-    HELIBAO;
+    HELIBAO("heLiBao"),
+    /**
+     * 富友
+     */
+    FUIOU("fuiou"),
+    /**
+     * 易宝线上
+     */
+    YEEPAY_ONLINE("yeepayOnline"),
+    /**
+     * 易宝数娱
+     */
+    YEEPAY_PLAY("yeepayPlay"),
+    ;
 
-    public static String getEnumValue(ChannelEnum channelEnum) {
-        switch (channelEnum) {
-            case LESHUA:
-                return "leShua";
-            case LESHUAONLINE:
-                return "leShuaOnline";
-            case ALIPAY:
-                return "alipay";
-            case WECHAT:
-                return "wechat";
-            case YSEPAY:
-                return "ysepay";
-            case SUIXINGFU:
-                return "suiXingFu";
-            case HELIBAO:
-                return "heLiBao";
-            default:
-                return null;
+    ChannelEnum(String channelCode) {
+        this.channelCode = channelCode;
+    }
+
+    private final String channelCode;
+
+    public String getChannelCode() {
+        return channelCode;
+    }
+
+    public static ChannelEnum getChannelEnum(String channelCode) {
+        if (StrUtils.isEmpty(channelCode)) {
+            return null;
         }
+        for (ChannelEnum value : values()) {
+            if (channelCode.equals(value.getChannelCode())) {
+                return value;
+            }
+        }
+        return null;
     }
 }
