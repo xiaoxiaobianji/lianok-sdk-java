@@ -47,6 +47,30 @@ public enum ChannelEnum {
      * 易宝数娱
      */
     YEEPAY_PLAY("yeepayPlay"),
+    /**
+     * 统统付
+     */
+    SUMPAY("sumpay"),
+    /**
+     * 统统付线上
+     */
+    SUMPAY_ONLINE("sumpayOnline"),
+    /**
+     * 统统付数娱
+     */
+    SUMPAY_PLAY("sumpayPlay"),
+    /**
+     * 汇付
+     */
+    HUIFU("huifu"),
+    /**
+     * 汇付线上
+     */
+    HUiFU_ONLINE("huifuOnline"),
+    /**
+     * 汇付数娱
+     */
+    HUIFU_PLAY("huifuPlay"),
     ;
 
     ChannelEnum(String channelCode) {

@@ -24,7 +24,7 @@ public class ApiHlBillOrderQueryRequest extends AbstractDockingRequest {
     /**
      * 火脸分账账单编号
      */
-    private Long billId;
+    private String billNo;
 
 
     public String getMerchantNo() {
@@ -51,12 +51,12 @@ public class ApiHlBillOrderQueryRequest extends AbstractDockingRequest {
         this.shareNo = billNo;
     }
 
-    public Long getBillId() {
-        return billId;
+    public String getBillNo() {
+        return billNo;
     }
 
-    public void setBillId(Long billId) {
-        this.billId = billId;
+    public void setBillNo(String billNo) {
+        this.billNo = billNo;
     }
 
     @Override

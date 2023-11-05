@@ -24,7 +24,7 @@ public class ApiHlShareOrderCancelRequest extends AbstractDockingRequest {
     /**
      * 火脸分账账单编号
      */
-    private Long shareNo;
+    private String shareNo;
 
     public String getMerchantNo() {
         return merchantNo;
@@ -50,11 +50,11 @@ public class ApiHlShareOrderCancelRequest extends AbstractDockingRequest {
         this.billNo = billNo;
     }
 
-    public Long getShareNo() {
+    public String getShareNo() {
         return shareNo;
     }
 
-    public void setShareNo(Long shareNo) {
+    public void setShareNo(String shareNo) {
         this.shareNo = shareNo;
     }
 
