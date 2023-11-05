@@ -1,10 +1,13 @@
 package com.lianok.docking.pay.request;
 
+import com.alibaba.fastjson.JSON;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
+import com.lianok.docking.ledger.request.ApiHlShareOrderCreateRequest;
 import com.lianok.docking.pay.response.ApiHlOrderRefundOperationResponse;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * 退款接口
@@ -156,6 +159,22 @@ public class ApiHlOrderRefundOperationRequest extends AbstractDockingRequest {
         this.notifyUrl = notifyUrl;
     }
 
+    public Integer getShareRefundMode() {
+        return shareRefundMode;
+    }
+
+    public void setShareRefundMode(Integer shareRefundMode) {
+        this.shareRefundMode = shareRefundMode;
+    }
+
+    public String getRefundDetails() {
+        return refundDetails;
+    }
+
+    public void setRefundDetails(List<ShareRefundDetail> refundDetails) {
+        this.refundDetails = JSON.toJSONString(refundDetails);
+    }
+
     @Override
     public String getResource() {
         return "api.hl.order.refund.operation";
@@ -164,5 +183,45 @@ public class ApiHlOrderRefundOperationRequest extends AbstractDockingRequest {
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
         return ApiHlOrderRefundOperationResponse.class;
+    }
+
+
+    public static class ShareRefundDetail {
+        /**
+         * 渠道编号
+         */
+        private String receiveChannelCode;
+        /**
+         * 商户编号
+         */
+        private String receiveMerchantNo;
+        /**
+         * 退款金额
+         */
+        private BigDecimal refundAmount;
+
+        public String getReceiveChannelCode() {
+            return receiveChannelCode;
+        }
+
+        public void setReceiveChannelCode(String receiveChannelCode) {
+            this.receiveChannelCode = receiveChannelCode;
+        }
+
+        public String getReceiveMerchantNo() {
+            return receiveMerchantNo;
+        }
+
+        public void setReceiveMerchantNo(String receiveMerchantNo) {
+            this.receiveMerchantNo = receiveMerchantNo;
+        }
+
+        public BigDecimal getRefundAmount() {
+            return refundAmount;
+        }
+
+        public void setRefundAmount(BigDecimal refundAmount) {
+            this.refundAmount = refundAmount;
+        }
     }
 }
