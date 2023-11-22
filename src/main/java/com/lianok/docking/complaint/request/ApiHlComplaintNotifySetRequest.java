@@ -2,6 +2,7 @@ package com.lianok.docking.complaint.request;
 
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
+import com.lianok.docking.complaint.response.ApiHlComplaintNotifySetResponse;
 
 /**
  * 设置投诉通知回调请求参数
@@ -41,6 +42,6 @@ public class ApiHlComplaintNotifySetRequest extends AbstractDockingRequest {
 
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
-        return DockingResponseBase.class;
+        return ApiHlComplaintNotifySetResponse.class;
     }
 }

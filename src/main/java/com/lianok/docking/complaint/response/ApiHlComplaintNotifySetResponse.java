@@ -5,7 +5,18 @@ import com.lianok.core.entity.DockingResponseBase;
 public class ApiHlComplaintNotifySetResponse extends DockingResponseBase {
 
     private String merchantNo;
+
     private String notifyUrl;
+
+    private String cipherKey;
+
+    public String getMerchantNo() {
+        return merchantNo;
+    }
+
+    public void setMerchantNo(String merchantNo) {
+        this.merchantNo = merchantNo;
+    }
 
     public String getNotifyUrl() {
         return notifyUrl;
@@ -15,11 +26,11 @@ public class ApiHlComplaintNotifySetResponse extends DockingResponseBase {
         this.notifyUrl = notifyUrl;
     }
 
-    public String getMerchantNo() {
-        return merchantNo;
+    public String getCipherKey() {
+        return cipherKey;
     }
 
-    public void setMerchantNo(String merchantNo) {
-        this.merchantNo = merchantNo;
+    public void setCipherKey(String cipherKey) {
+        this.cipherKey = cipherKey;
     }
 }
