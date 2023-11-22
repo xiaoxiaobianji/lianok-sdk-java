@@ -7,23 +7,21 @@ import com.lianok.docking.bill.response.ApiHlOrderAccountStatementApplyResponse;
 /**
  * 对账单申请
  */
-public class ApiHlOrderAccountStatementApplyReuqest extends AbstractDockingRequest {
-
-    @Override
-    public String getResource() {
-        return "api.hl.order.accountStatementApply";
-    }
-
-    @Override
-    public Class<? extends DockingResponseBase> getResponseClass() {
-        return ApiHlOrderAccountStatementApplyResponse.class;
-    }
+public class ApiHlOrderAccountStatementApplyRequest extends AbstractDockingRequest {
 
     /**
      * 下载对账日期
      * 格式：yyyy-MM-dd
      */
     private String billDate;
+    /**
+     * 载对账日期开始时间
+     */
+    private String billBeginTime;
+    /**
+     * 下载对账日期结束时间
+     */
+    private String billEndTime;
     /**
      * 下载类型
      * 1：日统计数据
@@ -63,6 +61,32 @@ public class ApiHlOrderAccountStatementApplyReuqest extends AbstractDockingReque
 
     public void setMerchantNo(String merchantNo) {
         this.merchantNo = merchantNo;
+    }
+
+    public String getBillBeginTime() {
+        return billBeginTime;
+    }
+
+    public void setBillBeginTime(String billBeginTime) {
+        this.billBeginTime = billBeginTime;
+    }
+
+    public String getBillEndTime() {
+        return billEndTime;
+    }
+
+    public void setBillEndTime(String billEndTime) {
+        this.billEndTime = billEndTime;
+    }
+
+    @Override
+    public String getResource() {
+        return "api.hl.order.accountStatementApply";
+    }
+
+    @Override
+    public Class<? extends DockingResponseBase> getResponseClass() {
+        return ApiHlOrderAccountStatementApplyResponse.class;
     }
 
 }
