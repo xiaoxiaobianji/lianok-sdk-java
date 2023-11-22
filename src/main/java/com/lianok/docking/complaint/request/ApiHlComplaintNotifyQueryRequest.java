@@ -2,7 +2,7 @@ package com.lianok.docking.complaint.request;
 
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.docking.complaint.response.ApiHlComplaintNotifyResponse;
+import com.lianok.docking.complaint.response.ApiHlComplaintNotifyQueryResponse;
 
 public class ApiHlComplaintNotifyQueryRequest extends AbstractDockingRequest {
 
@@ -15,7 +15,7 @@ public class ApiHlComplaintNotifyQueryRequest extends AbstractDockingRequest {
 
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
-        return ApiHlComplaintNotifyResponse.class;
+        return ApiHlComplaintNotifyQueryResponse.class;
     }
 
     public String getMerchantNo() {
