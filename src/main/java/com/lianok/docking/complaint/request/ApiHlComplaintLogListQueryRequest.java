@@ -4,8 +4,6 @@ import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.complaint.response.ApiHlComplaintLogListQueryResponse;
 
-import java.time.LocalDateTime;
-
 
 public class ApiHlComplaintLogListQueryRequest extends AbstractDockingRequest {
 
@@ -13,9 +11,9 @@ public class ApiHlComplaintLogListQueryRequest extends AbstractDockingRequest {
 
     private String huolianComplaintNo;
 
-    private LocalDateTime beginTime;
+    private String beginTime;
 
-    private LocalDateTime endTime;
+    private String endTime;
 
     private Integer pageNo;
 
@@ -47,19 +45,19 @@ public class ApiHlComplaintLogListQueryRequest extends AbstractDockingRequest {
         this.huolianComplaintNo = huolianComplaintNo;
     }
 
-    public LocalDateTime getBeginTime() {
+    public String getBeginTime() {
         return beginTime;
     }
 
-    public void setBeginTime(LocalDateTime beginTime) {
+    public void setBeginTime(String beginTime) {
         this.beginTime = beginTime;
     }
 
-    public LocalDateTime getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(LocalDateTime endTime) {
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
 
