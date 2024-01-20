@@ -62,6 +62,10 @@ public class ApiHlOrderPrePayAppletRequest extends AbstractDockingRequest {
      * 1-分账,2-延时结算
      */
     private Integer shareMarkFlag;
+    /**
+     * 客户端用户IP
+     */
+    private String clientIp;
 
     public String getBusinessOrderNo() {
         return businessOrderNo;
@@ -157,6 +161,14 @@ public class ApiHlOrderPrePayAppletRequest extends AbstractDockingRequest {
 
     public void setShareMarkFlag(Integer shareMarkFlag) {
         this.shareMarkFlag = shareMarkFlag;
+    }
+
+    public String getClientIp() {
+        return clientIp;
+    }
+
+    public void setClientIp(String clientIp) {
+        this.clientIp = clientIp;
     }
 
     @Override

@@ -15,6 +15,6 @@ public class ClientBuilder {
     }
 
     public IDockingClient build() {
-        return new HttpClient(this.config);
+        return new ResponseClient(this.config);
     }
 }

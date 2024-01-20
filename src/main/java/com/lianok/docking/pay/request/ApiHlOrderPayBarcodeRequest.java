@@ -95,6 +95,10 @@ public class ApiHlOrderPayBarcodeRequest extends AbstractDockingRequest {
      * 不传默认为普通交易
      */
     private Integer shareMarkFlag;
+    /**
+     * 客户端用户IP
+     */
+    private String clientIp;
 
     public String getPayBarcode() {
         return payBarcode;
@@ -214,6 +218,14 @@ public class ApiHlOrderPayBarcodeRequest extends AbstractDockingRequest {
 
     public void setShareMarkFlag(Integer shareMarkFlag) {
         this.shareMarkFlag = shareMarkFlag;
+    }
+
+    public String getClientIp() {
+        return clientIp;
+    }
+
+    public void setClientIp(String clientIp) {
+        this.clientIp = clientIp;
     }
 
     @Override

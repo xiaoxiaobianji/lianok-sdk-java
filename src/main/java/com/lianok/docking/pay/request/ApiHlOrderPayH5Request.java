@@ -56,6 +56,10 @@ public class ApiHlOrderPayH5Request extends AbstractDockingRequest {
 
     private String itemAmount;
     private String itemQuantity;
+    /**
+     * 客户端用户IP
+     */
+    private String clientIp;
 
     public String getBusinessOrderNo() {
         return businessOrderNo;
@@ -143,6 +147,14 @@ public class ApiHlOrderPayH5Request extends AbstractDockingRequest {
 
     public void setItemQuantity(String itemQuantity) {
         this.itemQuantity = itemQuantity;
+    }
+
+    public String getClientIp() {
+        return clientIp;
+    }
+
+    public void setClientIp(String clientIp) {
+        this.clientIp = clientIp;
     }
 
     @Override

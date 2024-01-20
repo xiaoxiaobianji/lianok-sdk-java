@@ -6,6 +6,7 @@ import com.lianok.core.IDockingClient;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.core.entity.ResponseResultBase;
+import com.lianok.core.entity.ResponseResultListBase;
 
 /**
  * 接口调度服务
@@ -38,6 +39,10 @@ public class LianokService {
     }
 
     public <T extends DockingResponseBase> ResponseResultBase<T> execute(AbstractDockingRequest request) throws Exception {
-        return client.execute(request);
+        return (ResponseResultBase<T>) client.execute(request);
+    }
+
+    public <T extends DockingResponseBase> ResponseResultListBase<T> executeResponseList(AbstractDockingRequest request) throws Exception {
+        return (ResponseResultListBase<T>) client.executeList(request);
     }
 }

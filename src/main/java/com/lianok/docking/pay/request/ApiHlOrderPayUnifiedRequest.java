@@ -109,6 +109,10 @@ public class ApiHlOrderPayUnifiedRequest extends AbstractDockingRequest {
      * 当消费者订单支付成功后可跳转至该地址
      */
     private String callBackUrl;
+    /**
+     * 客户端用户IP
+     */
+    private String clientIp;
 
     public String getBusinessOrderNo() {
         return businessOrderNo;
@@ -244,6 +248,18 @@ public class ApiHlOrderPayUnifiedRequest extends AbstractDockingRequest {
 
     public void setCallBackUrl(String callBackUrl) {
         this.callBackUrl = callBackUrl;
+    }
+
+    public void setShareMarkFlag(Integer shareMarkFlag) {
+        this.shareMarkFlag = shareMarkFlag;
+    }
+
+    public String getClientIp() {
+        return clientIp;
+    }
+
+    public void setClientIp(String clientIp) {
+        this.clientIp = clientIp;
     }
 
     @Override

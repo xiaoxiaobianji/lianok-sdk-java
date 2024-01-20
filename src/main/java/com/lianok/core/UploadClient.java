@@ -6,6 +6,7 @@ import com.lianok.core.config.AbstractConfig;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.core.entity.ResponseResultBase;
+import com.lianok.core.entity.ResponseResultListBase;
 import com.lianok.core.utils.HttpUtil;
 import com.lianok.core.utils.StrUtils;
 import com.lianok.docking.upload.request.ApiHlShopUploadImageRequest;
@@ -52,5 +53,10 @@ public class UploadClient implements IDockingClient {
             result.setData(response);
         }
         return result;
+    }
+
+    @Override
+    public <T extends DockingResponseBase> ResponseResultListBase<T> executeList(AbstractDockingRequest request) throws Exception {
+        throw new Exception("上传方法请调用 execute");
     }
 }
