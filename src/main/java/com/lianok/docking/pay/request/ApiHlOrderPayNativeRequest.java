@@ -74,6 +74,10 @@ public class ApiHlOrderPayNativeRequest extends AbstractDockingRequest {
      * 无单品券优惠信息请不要传此字段
      */
     private String goodsInfo;
+    /**
+     * 客户端用户IP
+     */
+    private String clientIp;
 
     public String getBusinessOrderNo() {
         return businessOrderNo;
@@ -169,6 +173,14 @@ public class ApiHlOrderPayNativeRequest extends AbstractDockingRequest {
 
     public void setGoodsInfo(String goodsInfo) {
         this.goodsInfo = goodsInfo;
+    }
+
+    public String getClientIp() {
+        return clientIp;
+    }
+
+    public void setClientIp(String clientIp) {
+        this.clientIp = clientIp;
     }
 
     @Override

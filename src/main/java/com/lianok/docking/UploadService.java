@@ -34,6 +34,6 @@ public class UploadService {
     }
 
     public <T extends DockingResponseBase> ResponseResultBase<T> execute(AbstractDockingRequest request) throws Exception {
-        return client.execute(request);
+        return (ResponseResultBase<T>) client.execute(request);
     }
 }
