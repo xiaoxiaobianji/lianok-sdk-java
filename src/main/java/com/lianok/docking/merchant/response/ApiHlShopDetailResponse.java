@@ -25,7 +25,7 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
     private String merchantType;
     private String merchantLicenseType;
     private String merchantLicenseTypeDesc;
-    private String merchantLicenseImg;
+//    private String merchantLicenseImg;
     private String merchantLicenseFullName;
     private String merchantLicenseNo;
     private LocalDate merchantLicenseBegDate;
@@ -37,12 +37,12 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
     private String lawAddress;
     private LocalDate idCardExpireDate;
     private LocalDate idCardBeginDate;
-    private String idCardPortraitImg;
-    private String idCardEmblemImg;
-    private String merchantFaceImg;
-    private String merchantInnerImg;
-    private String merchantCashdeskImg;
-    private String idCardHandImg;
+//    private String idCardPortraitImg;
+//    private String idCardEmblemImg;
+//    private String merchantFaceImg;
+//    private String merchantInnerImg;
+//    private String merchantCashdeskImg;
+//    private String idCardHandImg;
     private String settleType;
     private String bankAccountName;
     private String bankCardNo;
@@ -53,15 +53,15 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
     private String bankContactLine;
     private String bankBranchName;
     private String bankMobile;
-    private String bankOpenAccountLicenseImg;
-    private String settlementAccountFrontImg;
-    private String nonLawIdCardPortraitImg;
-    private String nonLawIdCardEmblemImg;
-    private String nonLawSettleAuthImg;
-    private String nonLawIdCardHandImg;
-    private String nonLawBankCardHandImg;
-    private String bankCardImg;
-    private String bankCardBackImg;
+//    private String bankOpenAccountLicenseImg;
+//    private String settlementAccountFrontImg;
+//    private String nonLawIdCardPortraitImg;
+//    private String nonLawIdCardEmblemImg;
+//    private String nonLawSettleAuthImg;
+//    private String nonLawIdCardHandImg;
+//    private String nonLawBankCardHandImg;
+//    private String bankCardImg;
+//    private String bankCardBackImg;
     private String nonLawIdCardNo;
     private BigDecimal wechatPayRate;
     private BigDecimal alipayRate;
@@ -96,20 +96,20 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
     private String email;
     private String alipayAccount;
     private String wechatAppletAppid;
-    private String qualificationImg;
-    private String orgImg;
+//    private String qualificationImg;
+//    private String orgImg;
     private String orgCode;
     private LocalDate orgPeriodBegin;
     private LocalDate orgPeriodEnd;
-    private String certificateLetterImg;
+//    private String certificateLetterImg;
     private String signUrl;
     private Boolean isThreeCertInOne;
     private String cloudPayStatus;
-    private String merchantBusinessLicenseImg;
+//    private String merchantBusinessLicenseImg;
     private String linkmanCertificatesType;
     private String idCardAddress;
-    private String linkmanIdCardPortraitImg;
-    private String linkmanIdCardEmblemImg;
+//    private String linkmanIdCardPortraitImg;
+//    private String linkmanIdCardEmblemImg;
     private LocalDate linkmanIdCardBeginDate;
     private LocalDate linkmanIdCardExpireDate;
     private String settleMethod;
@@ -251,14 +251,6 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
         this.merchantLicenseTypeDesc = merchantLicenseTypeDesc;
     }
 
-    public String getMerchantLicenseImg() {
-        return merchantLicenseImg;
-    }
-
-    public void setMerchantLicenseImg(String merchantLicenseImg) {
-        this.merchantLicenseImg = merchantLicenseImg;
-    }
-
     public String getMerchantLicenseFullName() {
         return merchantLicenseFullName;
     }
@@ -347,54 +339,6 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
         this.idCardBeginDate = idCardBeginDate;
     }
 
-    public String getIdCardPortraitImg() {
-        return idCardPortraitImg;
-    }
-
-    public void setIdCardPortraitImg(String idCardPortraitImg) {
-        this.idCardPortraitImg = idCardPortraitImg;
-    }
-
-    public String getIdCardEmblemImg() {
-        return idCardEmblemImg;
-    }
-
-    public void setIdCardEmblemImg(String idCardEmblemImg) {
-        this.idCardEmblemImg = idCardEmblemImg;
-    }
-
-    public String getMerchantFaceImg() {
-        return merchantFaceImg;
-    }
-
-    public void setMerchantFaceImg(String merchantFaceImg) {
-        this.merchantFaceImg = merchantFaceImg;
-    }
-
-    public String getMerchantInnerImg() {
-        return merchantInnerImg;
-    }
-
-    public void setMerchantInnerImg(String merchantInnerImg) {
-        this.merchantInnerImg = merchantInnerImg;
-    }
-
-    public String getMerchantCashdeskImg() {
-        return merchantCashdeskImg;
-    }
-
-    public void setMerchantCashdeskImg(String merchantCashdeskImg) {
-        this.merchantCashdeskImg = merchantCashdeskImg;
-    }
-
-    public String getIdCardHandImg() {
-        return idCardHandImg;
-    }
-
-    public void setIdCardHandImg(String idCardHandImg) {
-        this.idCardHandImg = idCardHandImg;
-    }
-
     public String getSettleType() {
         return settleType;
     }
@@ -473,78 +417,6 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
 
     public void setBankMobile(String bankMobile) {
         this.bankMobile = bankMobile;
-    }
-
-    public String getBankOpenAccountLicenseImg() {
-        return bankOpenAccountLicenseImg;
-    }
-
-    public void setBankOpenAccountLicenseImg(String bankOpenAccountLicenseImg) {
-        this.bankOpenAccountLicenseImg = bankOpenAccountLicenseImg;
-    }
-
-    public String getSettlementAccountFrontImg() {
-        return settlementAccountFrontImg;
-    }
-
-    public void setSettlementAccountFrontImg(String settlementAccountFrontImg) {
-        this.settlementAccountFrontImg = settlementAccountFrontImg;
-    }
-
-    public String getNonLawIdCardPortraitImg() {
-        return nonLawIdCardPortraitImg;
-    }
-
-    public void setNonLawIdCardPortraitImg(String nonLawIdCardPortraitImg) {
-        this.nonLawIdCardPortraitImg = nonLawIdCardPortraitImg;
-    }
-
-    public String getNonLawIdCardEmblemImg() {
-        return nonLawIdCardEmblemImg;
-    }
-
-    public void setNonLawIdCardEmblemImg(String nonLawIdCardEmblemImg) {
-        this.nonLawIdCardEmblemImg = nonLawIdCardEmblemImg;
-    }
-
-    public String getNonLawSettleAuthImg() {
-        return nonLawSettleAuthImg;
-    }
-
-    public void setNonLawSettleAuthImg(String nonLawSettleAuthImg) {
-        this.nonLawSettleAuthImg = nonLawSettleAuthImg;
-    }
-
-    public String getNonLawIdCardHandImg() {
-        return nonLawIdCardHandImg;
-    }
-
-    public void setNonLawIdCardHandImg(String nonLawIdCardHandImg) {
-        this.nonLawIdCardHandImg = nonLawIdCardHandImg;
-    }
-
-    public String getNonLawBankCardHandImg() {
-        return nonLawBankCardHandImg;
-    }
-
-    public void setNonLawBankCardHandImg(String nonLawBankCardHandImg) {
-        this.nonLawBankCardHandImg = nonLawBankCardHandImg;
-    }
-
-    public String getBankCardImg() {
-        return bankCardImg;
-    }
-
-    public void setBankCardImg(String bankCardImg) {
-        this.bankCardImg = bankCardImg;
-    }
-
-    public String getBankCardBackImg() {
-        return bankCardBackImg;
-    }
-
-    public void setBankCardBackImg(String bankCardBackImg) {
-        this.bankCardBackImg = bankCardBackImg;
     }
 
     public String getNonLawIdCardNo() {
@@ -819,22 +691,6 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
         this.wechatAppletAppid = wechatAppletAppid;
     }
 
-    public String getQualificationImg() {
-        return qualificationImg;
-    }
-
-    public void setQualificationImg(String qualificationImg) {
-        this.qualificationImg = qualificationImg;
-    }
-
-    public String getOrgImg() {
-        return orgImg;
-    }
-
-    public void setOrgImg(String orgImg) {
-        this.orgImg = orgImg;
-    }
-
     public String getOrgCode() {
         return orgCode;
     }
@@ -857,14 +713,6 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
 
     public void setOrgPeriodEnd(LocalDate orgPeriodEnd) {
         this.orgPeriodEnd = orgPeriodEnd;
-    }
-
-    public String getCertificateLetterImg() {
-        return certificateLetterImg;
-    }
-
-    public void setCertificateLetterImg(String certificateLetterImg) {
-        this.certificateLetterImg = certificateLetterImg;
     }
 
     public String getSignUrl() {
@@ -891,14 +739,6 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
         this.cloudPayStatus = cloudPayStatus;
     }
 
-    public String getMerchantBusinessLicenseImg() {
-        return merchantBusinessLicenseImg;
-    }
-
-    public void setMerchantBusinessLicenseImg(String merchantBusinessLicenseImg) {
-        this.merchantBusinessLicenseImg = merchantBusinessLicenseImg;
-    }
-
     public String getLinkmanCertificatesType() {
         return linkmanCertificatesType;
     }
@@ -913,22 +753,6 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
 
     public void setIdCardAddress(String idCardAddress) {
         this.idCardAddress = idCardAddress;
-    }
-
-    public String getLinkmanIdCardPortraitImg() {
-        return linkmanIdCardPortraitImg;
-    }
-
-    public void setLinkmanIdCardPortraitImg(String linkmanIdCardPortraitImg) {
-        this.linkmanIdCardPortraitImg = linkmanIdCardPortraitImg;
-    }
-
-    public String getLinkmanIdCardEmblemImg() {
-        return linkmanIdCardEmblemImg;
-    }
-
-    public void setLinkmanIdCardEmblemImg(String linkmanIdCardEmblemImg) {
-        this.linkmanIdCardEmblemImg = linkmanIdCardEmblemImg;
     }
 
     public LocalDate getLinkmanIdCardBeginDate() {

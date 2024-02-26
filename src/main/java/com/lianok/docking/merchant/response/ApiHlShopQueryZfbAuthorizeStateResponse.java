@@ -5,8 +5,8 @@ import com.lianok.core.entity.DockingResponseBase;
 public class ApiHlShopQueryZfbAuthorizeStateResponse extends DockingResponseBase {
 
     private String merchantNo;
-    private String merchantId;
-    private String smid;
+    private String channelMerchantNo;
+    private String alipayMerchantNo;
     private String authorizeState;
 
     public String getMerchantNo() {
@@ -17,20 +17,20 @@ public class ApiHlShopQueryZfbAuthorizeStateResponse extends DockingResponseBase
         this.merchantNo = merchantNo;
     }
 
-    public String getMerchantId() {
-        return merchantId;
+    public String getChannelMerchantNo() {
+        return channelMerchantNo;
     }
 
-    public void setMerchantId(String merchantId) {
-        this.merchantId = merchantId;
+    public void setChannelMerchantNo(String channelMerchantNo) {
+        this.channelMerchantNo = channelMerchantNo;
     }
 
-    public String getSmid() {
-        return smid;
+    public String getAlipayMerchantNo() {
+        return alipayMerchantNo;
     }
 
-    public void setSmid(String smid) {
-        this.smid = smid;
+    public void setAlipayMerchantNo(String alipayMerchantNo) {
+        this.alipayMerchantNo = alipayMerchantNo;
     }
 
     public String getAuthorizeState() {
