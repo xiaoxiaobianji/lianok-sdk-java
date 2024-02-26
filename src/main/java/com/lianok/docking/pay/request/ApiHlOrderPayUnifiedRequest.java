@@ -238,10 +238,6 @@ public class ApiHlOrderPayUnifiedRequest extends AbstractDockingRequest {
         return shareMarkFlag;
     }
 
-    public void setGoodsInfo(Integer shareMarkFlag) {
-        this.shareMarkFlag = shareMarkFlag;
-    }
-
     public String getCallBackUrl() {
         return callBackUrl;
     }

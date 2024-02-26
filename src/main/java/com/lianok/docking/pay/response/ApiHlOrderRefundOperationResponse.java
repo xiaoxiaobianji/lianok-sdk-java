@@ -17,6 +17,9 @@ public class ApiHlOrderRefundOperationResponse extends DockingResponseBase {
     private String merchantNo;
     private String cashierNo;
     private String deviceNo;
+    private String channelRefundNo;
+    private BigDecimal benefitAmount;
+    private BigDecimal officialCouponAmount;
 
     public String getOrderNo() {
         return orderNo;
@@ -104,5 +107,29 @@ public class ApiHlOrderRefundOperationResponse extends DockingResponseBase {
 
     public void setDeviceNo(String deviceNo) {
         this.deviceNo = deviceNo;
+    }
+
+    public String getChannelRefundNo() {
+        return channelRefundNo;
+    }
+
+    public void setChannelRefundNo(String channelRefundNo) {
+        this.channelRefundNo = channelRefundNo;
+    }
+
+    public BigDecimal getBenefitAmount() {
+        return benefitAmount;
+    }
+
+    public void setBenefitAmount(BigDecimal benefitAmount) {
+        this.benefitAmount = benefitAmount;
+    }
+
+    public BigDecimal getOfficialCouponAmount() {
+        return officialCouponAmount;
+    }
+
+    public void setOfficialCouponAmount(BigDecimal officialCouponAmount) {
+        this.officialCouponAmount = officialCouponAmount;
     }
 }

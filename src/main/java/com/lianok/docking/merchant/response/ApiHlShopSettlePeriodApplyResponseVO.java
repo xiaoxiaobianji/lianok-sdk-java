@@ -17,6 +17,11 @@ public class ApiHlShopSettlePeriodApplyResponseVO {
     private String channelCode;
 
     /**
+     * 当前使用的结算时刻
+     */
+    private String settlePeriod;
+
+    /**
      * 分时结算开通状态
      */
     private Integer state;
@@ -69,5 +74,13 @@ public class ApiHlShopSettlePeriodApplyResponseVO {
 
     public void setPreviousSettlePeriod(String previousSettlePeriod) {
         this.previousSettlePeriod = previousSettlePeriod;
+    }
+
+    public String getSettlePeriod() {
+        return settlePeriod;
+    }
+
+    public void setSettlePeriod(String settlePeriod) {
+        this.settlePeriod = settlePeriod;
     }
 }

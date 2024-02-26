@@ -1,12 +1,13 @@
 package com.lianok.core.entity;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.annotation.JSONField;
 import com.lianok.core.IDockingRequest;
 import com.lianok.core.utils.StrUtils;
 
 import java.lang.reflect.Field;
-import java.util.HashMap;
-import java.util.Map;
+import java.math.BigDecimal;
+import java.util.*;
 
 /**
  * 请求对象基类
@@ -32,6 +33,12 @@ public abstract class AbstractDockingRequest implements IDockingRequest {
      */
     @JSONField(serialize = false)
     private String requestTime;
+
+    /**
+     * 签名方式，sdk内使用
+     */
+    @JSONField(serialize = false)
+    private Integer signType = 0;
 
     /**
      * 返回接口对象
@@ -83,10 +90,32 @@ public abstract class AbstractDockingRequest implements IDockingRequest {
                 e.printStackTrace();
             }
             if (null != fieldValue) {
-                map.put(fieldName, fieldValue);
+                if (isBaseType(fieldValue)) {
+                    map.put(fieldName, fieldValue);
+                } else {
+                    map.put(fieldName, JSON.toJSONString(fieldValue));
+                }
             }
         }
-
         return map;
+    }
+
+    private Boolean allowCollect(Object obj) {
+        if (obj instanceof Byte || obj instanceof Integer || obj instanceof Short || obj instanceof Float || obj instanceof Double
+                || obj instanceof Long || obj instanceof Boolean || obj instanceof Character || obj instanceof String || obj instanceof BigDecimal
+                || obj instanceof List || obj instanceof Set || obj instanceof Queue || obj instanceof Map
+        ) {
+            return Boolean.TRUE;
+        }
+        return Boolean.FALSE;
+    }
+
+    private Boolean isBaseType(Object obj) {
+        if (obj instanceof Byte || obj instanceof Integer || obj instanceof Short || obj instanceof Float || obj instanceof Double
+                || obj instanceof Long || obj instanceof Boolean || obj instanceof Character || obj instanceof String || obj instanceof BigDecimal
+        ) {
+            return Boolean.TRUE;
+        }
+        return Boolean.FALSE;
     }
 }
