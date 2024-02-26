@@ -46,6 +46,7 @@ public class ApiHlShopEntryRequest extends AbstractDockingRequest {
     @JSONField(name = "merchantCashdeskImg")
     private String merchantCashDeskImg;
     private String mccCode;
+    private String consignmentImg;
     private String settleType;
     private String bankAccountName;
     private String bankContactLine;
@@ -304,6 +305,14 @@ public class ApiHlShopEntryRequest extends AbstractDockingRequest {
 
     public void setMccCode(String mccCode) {
         this.mccCode = mccCode;
+    }
+
+    public String getConsignmentImg() {
+        return consignmentImg;
+    }
+
+    public void setConsignmentImg(String consignmentImg) {
+        this.consignmentImg = consignmentImg;
     }
 
     public String getSettleType() {
