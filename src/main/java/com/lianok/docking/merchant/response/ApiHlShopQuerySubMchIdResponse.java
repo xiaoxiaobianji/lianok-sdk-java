@@ -6,8 +6,8 @@ public class ApiHlShopQuerySubMchIdResponse extends DockingResponseBase {
 
     private String merchantNo;
     private String channelCode;
-    private String smid;
-    private String wxPid;
+    private String alipayMerchantNo;
+    private String wechatMerchantNo;
 
     public String getMerchantNo() {
         return merchantNo;
@@ -25,19 +25,19 @@ public class ApiHlShopQuerySubMchIdResponse extends DockingResponseBase {
         this.channelCode = channelCode;
     }
 
-    public String getSmid() {
-        return smid;
+    public String getAlipayMerchantNo() {
+        return alipayMerchantNo;
     }
 
-    public void setSmid(String smid) {
-        this.smid = smid;
+    public void setAlipayMerchantNo(String alipayMerchantNo) {
+        this.alipayMerchantNo = alipayMerchantNo;
     }
 
-    public String getWxPid() {
-        return wxPid;
+    public String getWechatMerchantNo() {
+        return wechatMerchantNo;
     }
 
-    public void setWxPid(String wxPid) {
-        this.wxPid = wxPid;
+    public void setWechatMerchantNo(String wechatMerchantNo) {
+        this.wechatMerchantNo = wechatMerchantNo;
     }
 }

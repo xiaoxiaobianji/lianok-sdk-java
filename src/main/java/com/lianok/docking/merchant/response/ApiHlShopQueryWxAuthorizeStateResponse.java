@@ -5,8 +5,8 @@ import com.lianok.core.entity.DockingResponseBase;
 public class ApiHlShopQueryWxAuthorizeStateResponse extends DockingResponseBase {
 
     private String merchantNo;
-    private String merchantId;
-    private String wxPid;
+    private String channelMerchantNo;
+    private String wechatMerchantNo;
     private String authorizeState;
 
     public String getMerchantNo() {
@@ -17,20 +17,20 @@ public class ApiHlShopQueryWxAuthorizeStateResponse extends DockingResponseBase 
         this.merchantNo = merchantNo;
     }
 
-    public String getMerchantId() {
-        return merchantId;
+    public String getChannelMerchantNo() {
+        return channelMerchantNo;
     }
 
-    public void setMerchantId(String merchantId) {
-        this.merchantId = merchantId;
+    public void setChannelMerchantNo(String channelMerchantNo) {
+        this.channelMerchantNo = channelMerchantNo;
     }
 
-    public String getWxPid() {
-        return wxPid;
+    public String getWechatMerchantNo() {
+        return wechatMerchantNo;
     }
 
-    public void setWxPid(String wxPid) {
-        this.wxPid = wxPid;
+    public void setWechatMerchantNo(String wechatMerchantNo) {
+        this.wechatMerchantNo = wechatMerchantNo;
     }
 
     public String getAuthorizeState() {

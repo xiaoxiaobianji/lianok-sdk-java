@@ -6,41 +6,8 @@
 
     <groupId>com.lianok.docking</groupId>
     <artifactId>lianok-sdk-java</artifactId>
-    <version>1.1.4-SNAPSHOT</version>
+    <version>1.1.5-SNAPSHOT</version>
     <name>lianok-sdk-java</name>
-    <description>
-        sdk for api
-    </description>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-    </properties>
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-    <scm>
-        <connection>https://github.com/xiaoxiaobianji/lianok-sdk-java.git</connection>
-        <developerConnection>https://github.com/xiaoxiaobianji/lianok-sdk-java.git</developerConnection>
-        <url>https://github.com/xiaoxiaobianji/lianok-sdk-java</url>
-    </scm>
-    <url>https://github.com/xiaoxiaobianji/lianok-sdk-java</url>
-    <developers>
-        <developer>
-            <id>lianok-java-sdk</id>
-            <email>hlin@huolianpro.com</email>
-            <name>LianOk developers Team</name>
-            <roles>
-                <role>Developer</role>
-                <role>manager</role>
-            </roles>
-            <timezone>+8</timezone>
-        </developer>
-    </developers>
-
     <dependencies>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -49,4 +16,53 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
+    <!--提交私服配置-->
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <url>
+                http://nexus.intranet.aduer.com/repository/maven-releases/
+            </url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>
+                http://nexus.intranet.aduer.com/repository/maven-snapshots/
+            </url>
+        </snapshotRepository>
+    </distributionManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <skip>false</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

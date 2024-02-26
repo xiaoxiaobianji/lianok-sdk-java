@@ -9,6 +9,7 @@ import com.lianok.core.entity.ResponseResultBase;
 import com.lianok.core.entity.ResponseResultListBase;
 import com.lianok.core.utils.HttpUtil;
 import com.lianok.core.utils.StrUtils;
+import com.lianok.docking.complaint.request.ApiHlComplaintUploadImageRequest;
 import com.lianok.docking.upload.request.ApiHlShopUploadImageRequest;
 
 import java.lang.reflect.Type;
@@ -27,8 +28,8 @@ public class UploadClient implements IDockingClient {
 
     @Override
     public <T extends DockingResponseBase> ResponseResultBase<T> execute(AbstractDockingRequest request) throws Exception {
-        if (!(request instanceof ApiHlShopUploadImageRequest)) {
-            throw new ClassFormatError("参数类型错误：ApiHlShopUploadImageRequest");
+        if (!(request instanceof ApiHlShopUploadImageRequest) && !(request instanceof ApiHlComplaintUploadImageRequest)) {
+            throw new ClassFormatError("参数类型错误，需要使用sdk图片上传Request");
         }
         if (StrUtils.isEmpty(request.getRequestTime())) {
             String requestTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
@@ -42,8 +43,13 @@ public class UploadClient implements IDockingClient {
         paramMap.put("versionNo", request.getVersionNo());
         paramMap.put("sign", sign);
         Map<String, byte[]> fileMap = new HashMap<>(1);
-        ApiHlShopUploadImageRequest temp = (ApiHlShopUploadImageRequest) request;
-        fileMap.put(temp.getFileName(), temp.getFile());
+        if (request instanceof ApiHlShopUploadImageRequest) {
+            ApiHlShopUploadImageRequest temp = (ApiHlShopUploadImageRequest) request;
+            fileMap.put(temp.getFileName(), temp.getFile());
+        } else if (request instanceof ApiHlComplaintUploadImageRequest) {
+            ApiHlComplaintUploadImageRequest temp = (ApiHlComplaintUploadImageRequest) request;
+            fileMap.put(temp.getFileName(), temp.getFile());
+        }
         String responseContent = HttpUtil.upload(config.getUrl().replace("/do", "/file"), paramMap, fileMap);
         ResponseResultBase<T> result = JSONObject.parseObject(responseContent, ResponseResultBase.class);
         if (result.success()) {
