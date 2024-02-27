@@ -143,6 +143,11 @@ public class ApiHlAlipayLocalItemCreateRequest extends AbstractDockingRequest {
     }
 
     @Override
+    public Boolean getSignByObjectMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.alipay.local.item.create";
     }

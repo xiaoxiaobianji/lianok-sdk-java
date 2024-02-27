@@ -154,6 +154,11 @@ public class ApiHlAlipayLocalItemDirectModifyRequest extends AbstractDockingRequ
     }
 
     @Override
+    public Boolean getSignByObjectMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.alipay.local.item.direct.modify";
     }

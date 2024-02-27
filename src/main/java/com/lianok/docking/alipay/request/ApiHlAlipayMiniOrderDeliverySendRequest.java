@@ -152,6 +152,10 @@ public class ApiHlAlipayMiniOrderDeliverySendRequest extends AbstractDockingRequ
     }
 
     @Override
+    public Boolean getSignByObjectMethod() {
+        return true;
+    }
+    @Override
     public String getResource() {
         return "api.hl.alipay.mini.order.delivery.send";
     }
