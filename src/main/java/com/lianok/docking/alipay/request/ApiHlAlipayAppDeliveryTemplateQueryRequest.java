@@ -40,6 +40,11 @@ public class ApiHlAlipayAppDeliveryTemplateQueryRequest extends AbstractDockingR
     }
 
     @Override
+    public Boolean getSignByObjectMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.alipay.app.delivery.template.query";
     }

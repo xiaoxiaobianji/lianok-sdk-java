@@ -197,6 +197,11 @@ public class ApiHlAlipayAppItemCreateRequest extends AbstractDockingRequest {
     }
 
     @Override
+    public Boolean getSignByObjectMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.alipay.app.item.create";
     }

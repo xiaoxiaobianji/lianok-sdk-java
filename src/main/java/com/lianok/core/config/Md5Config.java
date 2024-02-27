@@ -1,11 +1,14 @@
 package com.lianok.core.config;
 
+import com.alibaba.fastjson.JSON;
 import com.lianok.core.emuns.EncryEnum;
 import com.lianok.core.emuns.EnvEnum;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.utils.CollectionUtils;
 import com.lianok.core.utils.SecurityUtils;
+import com.lianok.core.utils.StrUtils;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.TreeMap;
@@ -44,12 +47,19 @@ public final class Md5Config extends AbstractConfig {
 
     @Override
     public String encrypt(AbstractDockingRequest request) {
-        Map<String, Object> paramsMap = new TreeMap(request.getParams());
-        paramsMap.put("authCode", getAuthCode());
-        paramsMap.put("resource", request.getResource());
-        paramsMap.put("requestTime", request.getRequestTime());
-        paramsMap.put("versionNo", request.getVersionNo());
-        String strParams = CollectionUtils.mapToStr(paramsMap);
+        Boolean signByObject = request.getSignByObjectMethod();
+        Map<String, Object> pushMap;
+        if (signByObject != null && signByObject) {
+            String params = JSON.toJSONString(request);
+            pushMap = new TreeMap((Map) JSON.parse(params));
+        } else {
+            pushMap = new TreeMap(request.getParams());
+        }
+        pushMap.put("authCode", getAuthCode());
+        pushMap.put("resource", request.getResource());
+        pushMap.put("requestTime", request.getRequestTime());
+        pushMap.put("versionNo", request.getVersionNo());
+        String strParams = CollectionUtils.mapToStr(pushMap);
         strParams = strParams.toLowerCase();
         strParams = strParams + "&" + getKey();
         return SecurityUtils.md5(strParams);

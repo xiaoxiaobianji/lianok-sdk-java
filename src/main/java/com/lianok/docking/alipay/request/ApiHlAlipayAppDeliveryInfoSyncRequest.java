@@ -60,6 +60,11 @@ public class ApiHlAlipayAppDeliveryInfoSyncRequest extends AbstractDockingReques
     }
 
     @Override
+    public Boolean getSignByObjectMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.alipay.app.delivery.info.sync";
     }

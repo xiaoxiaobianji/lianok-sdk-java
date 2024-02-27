@@ -39,6 +39,11 @@ public class ApiHlAlipayAppDeliveryInfoQueryRequest extends AbstractDockingReque
     }
 
     @Override
+    public Boolean getSignByObjectMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.alipay.app.delivery.info.query";
     }

@@ -70,6 +70,11 @@ public class ApiHlAlipayCertBatchQueryRequest extends AbstractDockingRequest {
     }
 
     @Override
+    public Boolean getSignByObjectMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.alipay.cert.batch.query";
     }
