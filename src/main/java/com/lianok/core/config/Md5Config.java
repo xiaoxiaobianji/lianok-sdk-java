@@ -1,14 +1,13 @@
 package com.lianok.core.config;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.lianok.core.emuns.EncryEnum;
 import com.lianok.core.emuns.EnvEnum;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.utils.CollectionUtils;
 import com.lianok.core.utils.SecurityUtils;
-import com.lianok.core.utils.StrUtils;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.TreeMap;
@@ -47,6 +46,10 @@ public final class Md5Config extends AbstractConfig {
 
     @Override
     public String encrypt(AbstractDockingRequest request) {
+        //如果是入件+投诉的接口签名规则直接json串拼接
+        if(request.getSignByJsonStringMethod()) {
+            return jsonStringEncrypt(request);
+        }
         Boolean signByObject = request.getSignByObjectMethod();
         Map<String, Object> pushMap;
         if (signByObject != null && signByObject) {
@@ -63,6 +66,32 @@ public final class Md5Config extends AbstractConfig {
         strParams = strParams.toLowerCase();
         strParams = strParams + "&" + getKey();
         return SecurityUtils.md5(strParams);
+    }
+
+    public String jsonStringEncrypt(AbstractDockingRequest request){
+        Map<String, Object> paramMap = new TreeMap();
+        paramMap.put("authCode", getAuthCode());
+        if(request.getParams() != null) {
+            paramMap.put("params", JSONObject.toJSONString(request.getParams()));
+        }
+        paramMap.put("resource", request.getResource());
+        paramMap.put("requestTime", request.getRequestTime());
+        if (null != request.getVersionNo()) {
+            paramMap.put("versionNo", request.getVersionNo());
+        }
+        String strParams =  mapToStr(paramMap);
+        strParams = strParams.toLowerCase();
+        strParams = strParams + "&" + getKey();
+        return SecurityUtils.md5(strParams);
+    }
+
+    public static String mapToStr(Map<String,Object> map){
+        StringBuffer sb = new StringBuffer();
+        map.forEach((k,v)->{
+            sb.append(k).append("=").append(v).append("&");
+        });
+        String preSign = sb.toString();
+        return preSign.substring(0,preSign.length()-1);
     }
 
 }

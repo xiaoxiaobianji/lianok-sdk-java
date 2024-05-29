@@ -93,4 +93,19 @@ public abstract class AbstractDockingRequest implements IDockingRequest {
         }
         return map;
     }
+
+    /**
+     * 请求参数Json串
+     */
+    @JSONField(serialize = false)
+    private String params;
+
+    /**
+     * 是否json串加密格式：入件接口+投诉
+     * @return
+     */
+    @JSONField(serialize = false)
+    public Boolean getSignByJsonStringMethod() {
+        return false;
+    }
 }

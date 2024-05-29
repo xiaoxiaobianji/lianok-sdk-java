@@ -62,7 +62,12 @@ public class ResponseClient implements IDockingClient {
         lianOkRequest.setVersionNo(request.getVersionNo());
         lianOkRequest.setSign(sign);
         lianOkRequest.setParams(JSONObject.toJSONString(request.getParams()));
-        String responseContent = HttpUtil.doPost(config.getUrl(), JSONObject.toJSONString(lianOkRequest));
+        String requestUrl = config.getUrl();
+        if(request.getSignByJsonStringMethod()){
+            requestUrl = requestUrl.replaceFirst("/openapi/v2/api/biz/do","");
+        }
+
+        String responseContent = HttpUtil.doPost(requestUrl, JSONObject.toJSONString(lianOkRequest));
         return responseContent;
     }
 }
