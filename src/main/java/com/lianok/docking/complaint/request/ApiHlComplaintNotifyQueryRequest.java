@@ -9,6 +9,11 @@ public class ApiHlComplaintNotifyQueryRequest extends AbstractDockingRequest {
     private String merchantNo;
 
     @Override
+    public Boolean getSignByJsonStringMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.complaint.notify.query";
     }

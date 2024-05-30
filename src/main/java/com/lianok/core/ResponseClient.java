@@ -63,10 +63,10 @@ public class ResponseClient implements IDockingClient {
         lianOkRequest.setSign(sign);
         lianOkRequest.setParams(JSONObject.toJSONString(request.getParams()));
         String requestUrl = config.getUrl();
+        //入件+投诉的接口请求的接口路由是：/openapi/v2/api/biz/do
         if(request.getSignByJsonStringMethod()){
-            requestUrl = requestUrl.replaceFirst("/openapi/v2/api/biz/do","");
+            requestUrl = config.getEntryUrl();
         }
-
         String responseContent = HttpUtil.doPost(requestUrl, JSONObject.toJSONString(lianOkRequest));
         return responseContent;
     }

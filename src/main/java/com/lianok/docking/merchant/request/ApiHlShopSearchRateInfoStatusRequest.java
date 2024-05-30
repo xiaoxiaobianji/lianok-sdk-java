@@ -36,6 +36,11 @@ public class ApiHlShopSearchRateInfoStatusRequest extends AbstractDockingRequest
     }
 
     @Override
+    public Boolean getSignByJsonStringMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.shop.searchRateInfoStatus";
     }

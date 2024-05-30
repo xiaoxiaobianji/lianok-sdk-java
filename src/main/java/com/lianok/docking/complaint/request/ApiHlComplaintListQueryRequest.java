@@ -17,6 +17,11 @@ public class ApiHlComplaintListQueryRequest extends AbstractDockingRequest {
     private Integer pageSize;
 
     @Override
+    public Boolean getSignByJsonStringMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.complaint.list.query";
     }

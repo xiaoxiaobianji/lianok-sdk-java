@@ -12,6 +12,11 @@ public class ApiHlComplaintDetailQueryRequest extends AbstractDockingRequest {
     private String huolianComplaintNo;
 
     @Override
+    public Boolean getSignByJsonStringMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.complaint.detail.query";
     }

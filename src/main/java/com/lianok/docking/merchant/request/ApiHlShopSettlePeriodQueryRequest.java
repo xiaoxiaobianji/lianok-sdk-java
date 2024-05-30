@@ -33,6 +33,11 @@ public class ApiHlShopSettlePeriodQueryRequest extends AbstractDockingRequest {
     }
 
     @Override
+    public Boolean getSignByJsonStringMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.shop.settle.period.query";
     }

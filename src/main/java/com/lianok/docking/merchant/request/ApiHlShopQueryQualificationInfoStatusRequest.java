@@ -36,6 +36,11 @@ public class ApiHlShopQueryQualificationInfoStatusRequest extends AbstractDockin
     }
 
     @Override
+    public Boolean getSignByJsonStringMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.shop.queryQualificationInfoStatus";
     }

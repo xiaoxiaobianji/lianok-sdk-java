@@ -38,6 +38,11 @@ public class ApiHlShopQueryUpdateStatusRequest extends AbstractDockingRequest {
     }
 
     @Override
+    public Boolean getSignByJsonStringMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.shop.queryUpdateStatus";
     }

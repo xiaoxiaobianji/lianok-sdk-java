@@ -26,6 +26,11 @@ public class ApiHlShopQueryZfbAuthorizeStateRequest extends AbstractDockingReque
     }
 
     @Override
+    public Boolean getSignByJsonStringMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.shop.queryZfbAuthorizeState";
     }

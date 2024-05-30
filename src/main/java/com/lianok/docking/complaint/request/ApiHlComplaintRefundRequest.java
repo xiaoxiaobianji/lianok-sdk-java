@@ -21,6 +21,11 @@ public class ApiHlComplaintRefundRequest extends AbstractDockingRequest {
     private String remark;
 
     @Override
+    public Boolean getSignByJsonStringMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.complaint.refund";
     }

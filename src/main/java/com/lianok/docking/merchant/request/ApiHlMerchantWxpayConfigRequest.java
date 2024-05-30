@@ -65,6 +65,11 @@ public class ApiHlMerchantWxpayConfigRequest extends AbstractDockingRequest {
     }
 
     @Override
+    public Boolean getSignByJsonStringMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.merchant.wxpayconfig";
     }

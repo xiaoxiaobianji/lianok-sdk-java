@@ -29,6 +29,10 @@ public class ApiHlComplaintUploadImageRequest extends AbstractDockingRequest {
         this.file = file;
     }
 
+    @Override
+    public Boolean getSignByJsonStringMethod() {
+        return true;
+    }
 
     @Override
     public String getResource() {

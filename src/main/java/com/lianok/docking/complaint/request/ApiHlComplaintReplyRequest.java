@@ -27,6 +27,11 @@ public class ApiHlComplaintReplyRequest extends AbstractDockingRequest {
     private String actionType;
 
     @Override
+    public Boolean getSignByJsonStringMethod() {
+        return true;
+    }
+
+    @Override
     public String getResource() {
         return "api.hl.complaint.reply";
     }
