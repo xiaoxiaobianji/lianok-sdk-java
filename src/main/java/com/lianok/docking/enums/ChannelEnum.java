@@ -4,6 +4,8 @@ import com.lianok.core.utils.StrUtils;
 
 /**
  * 渠道枚举
+ *
+ * @author lianok.com
  */
 public enum ChannelEnum {
 

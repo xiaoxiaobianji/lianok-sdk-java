@@ -4,6 +4,8 @@ import com.lianok.core.entity.DockingResponseBase;
 
 /**
  * 订单分账撤销
+ *
+ * @author lianok.com
  */
 public class ApiHlBillOrderCancelResponse extends DockingResponseBase {
 

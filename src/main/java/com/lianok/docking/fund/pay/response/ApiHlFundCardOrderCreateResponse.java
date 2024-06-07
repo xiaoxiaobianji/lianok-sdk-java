@@ -2,6 +2,9 @@ package com.lianok.docking.fund.pay.response;
 
 import com.lianok.core.entity.DockingResponseBase;
 
+/**
+ * @author lianok.com
+ */
 public class ApiHlFundCardOrderCreateResponse extends DockingResponseBase {
 
     private String orderNo;

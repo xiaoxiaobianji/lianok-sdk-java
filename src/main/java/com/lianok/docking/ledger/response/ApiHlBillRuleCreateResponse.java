@@ -4,6 +4,8 @@ import com.lianok.core.entity.DockingResponseBase;
 
 /**
  * 分账规则新增
+ *
+ * @author lianok.com
  */
 public class ApiHlBillRuleCreateResponse extends DockingResponseBase {
 

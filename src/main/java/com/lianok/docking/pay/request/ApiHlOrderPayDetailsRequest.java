@@ -6,6 +6,8 @@ import com.lianok.docking.pay.response.ApiHlOrderPayDetailsResponse;
 
 /**
  * 订单详情
+ *
+ * @author lianok.com
  */
 public class ApiHlOrderPayDetailsRequest extends AbstractDockingRequest {
 

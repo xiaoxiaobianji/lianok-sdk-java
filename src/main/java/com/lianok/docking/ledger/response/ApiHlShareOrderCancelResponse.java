@@ -2,6 +2,9 @@ package com.lianok.docking.ledger.response;
 
 import com.lianok.core.entity.DockingResponseBase;
 
+/**
+ * @author lianok.com
+ */
 public class ApiHlShareOrderCancelResponse extends DockingResponseBase {
 
     private String merchantNo;

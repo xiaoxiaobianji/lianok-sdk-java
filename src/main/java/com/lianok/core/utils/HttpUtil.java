@@ -6,6 +6,9 @@ import java.net.URL;
 import java.util.Iterator;
 import java.util.Map;
 
+/**
+ * @author lianok.com
+ */
 public final class HttpUtil {
     private final static String ENCODING = "UTF-8";
     private static final String BOUNDARY = "--------------------lianok_1a2b3c4d5e6f";

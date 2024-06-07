@@ -6,6 +6,8 @@ import com.lianok.docking.bill.response.ApiHlOrderAccountStatementApplyResponse;
 
 /**
  * 对账单申请
+ *
+ * @author lianok.com
  */
 public class ApiHlOrderAccountStatementApplyRequest extends AbstractDockingRequest {
 

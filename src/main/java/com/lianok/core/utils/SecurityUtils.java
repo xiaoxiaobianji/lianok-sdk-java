@@ -4,6 +4,9 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * @author lianok.com
+ */
 public final class SecurityUtils {
 
     private final static String ENCODING = "UTF-8";

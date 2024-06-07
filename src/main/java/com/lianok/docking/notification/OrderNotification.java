@@ -7,6 +7,8 @@ import java.util.List;
 
 /**
  * 支付异步通知
+ *
+ * @author lianok.com
  */
 public class OrderNotification {
 

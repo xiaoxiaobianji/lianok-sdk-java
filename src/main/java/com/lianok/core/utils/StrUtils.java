@@ -1,8 +1,7 @@
 package com.lianok.core.utils;
 
 /**
- * @author linshu
- * @create 2023/10/8 11:50
+ * @author lianok.com
  */
 public final class StrUtils {
 

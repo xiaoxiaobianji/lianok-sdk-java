@@ -1,5 +1,8 @@
 package com.lianok.docking.notification;
 
+/**
+ * @author lianok.com
+ */
 public class ComplaintNotification {
     private String huolianLogNo;
     private String huolianComplaintNo;

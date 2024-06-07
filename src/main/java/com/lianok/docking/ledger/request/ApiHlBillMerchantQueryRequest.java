@@ -6,6 +6,8 @@ import com.lianok.docking.ledger.response.ApiHlBillMerchantQueryResponse;
 
 /**
  * 分账关系查询
+ *
+ * @author lianok.com
  */
 public class ApiHlBillMerchantQueryRequest extends AbstractDockingRequest {
 

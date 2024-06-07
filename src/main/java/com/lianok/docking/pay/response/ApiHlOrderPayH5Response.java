@@ -2,6 +2,9 @@ package com.lianok.docking.pay.response;
 
 import com.lianok.core.entity.DockingResponseBase;
 
+/**
+ * @author lianok.com
+ */
 public class ApiHlOrderPayH5Response extends DockingResponseBase {
 
     private String payUrl;

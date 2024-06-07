@@ -2,6 +2,9 @@ package com.lianok.core.utils;
 
 import java.util.Map;
 
+/**
+ * @author lianok.com
+ */
 public final class CollectionUtils  {
 
 

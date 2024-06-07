@@ -6,6 +6,8 @@ import com.lianok.docking.ledger.response.ApiHlBillRuleQueryResponse;
 
 /**
  * 分账规则查询
+ *
+ * @author lianok.com
  */
 public class ApiHlBillRuleQueryRequest extends AbstractDockingRequest {
 

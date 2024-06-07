@@ -2,6 +2,9 @@ package com.lianok.docking.fund.settle.response;
 
 import com.lianok.core.entity.DockingResponseBase;
 
+/**
+ * @author lianok.com
+ */
 public class ApiHlOrderDeferredSettlementConfirmResponse extends DockingResponseBase {
 
     private String merchantNo;

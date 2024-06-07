@@ -9,6 +9,8 @@ import java.util.List;
 
 /**
  * 分账规则查询
+ *
+ * @author lianok.com
  */
 public class ApiHlBillRuleQueryResponse extends DockingResponseBase {
 
@@ -86,6 +88,17 @@ public class ApiHlBillRuleQueryResponse extends DockingResponseBase {
 
         public void setShareRuleStatus(Integer shareRuleStatus) {
             this.shareRuleStatus = shareRuleStatus;
+        }
+
+        @Override
+        public String toString() {
+            return "MerchantShareRuleResponseVO {receiveMerchantNo='" + receiveMerchantNo
+                    + "',ruleEffectiveDate='" + ruleEffectiveDate
+                    + "',ruleExpiredDate='" + ruleExpiredDate
+                    + "',sharePercent=" + sharePercent
+                    + ",maxShareAmount=" + maxShareAmount
+                    + ",maxMonthShareAmount=" + maxMonthShareAmount
+                    + ",shareRuleStatus=" + shareRuleStatus + "}";
         }
     }
 }

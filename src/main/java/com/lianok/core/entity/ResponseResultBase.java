@@ -1,5 +1,8 @@
 package com.lianok.core.entity;
 
+/**
+ * @author lianok.com
+ */
 public class ResponseResultBase<T extends DockingResponseBase> extends ResponseBase {
 
     private T data;

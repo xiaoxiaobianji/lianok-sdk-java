@@ -9,6 +9,8 @@ import java.time.LocalDateTime;
 
 /**
  * 分账规则修改
+ *
+ * @author lianok.com
  */
 public class ApiHlBillRuleUpdateRequest extends AbstractDockingRequest {
 

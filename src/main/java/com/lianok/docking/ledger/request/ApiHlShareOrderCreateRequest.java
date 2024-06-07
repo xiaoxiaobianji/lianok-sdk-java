@@ -10,6 +10,8 @@ import java.util.List;
 
 /**
  * 订单分账申请
+ *
+ * @author lianok.com
  */
 public class ApiHlShareOrderCreateRequest extends AbstractDockingRequest {
 

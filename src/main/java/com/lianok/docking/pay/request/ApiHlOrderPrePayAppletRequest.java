@@ -6,6 +6,9 @@ import com.lianok.docking.pay.response.ApiHlOrderPrePayAppletResponse;
 
 import java.math.BigDecimal;
 
+/**
+ * @author lianok.com
+ */
 public class ApiHlOrderPrePayAppletRequest extends AbstractDockingRequest {
 
     /**

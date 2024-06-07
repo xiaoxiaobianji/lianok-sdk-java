@@ -4,6 +4,9 @@ import com.lianok.core.entity.DockingResponseBase;
 
 import java.math.BigDecimal;
 
+/**
+ * @author lianok.com
+ */
 public class ApiHlOrderRefundOperationResponse extends DockingResponseBase {
 
     private String orderNo;

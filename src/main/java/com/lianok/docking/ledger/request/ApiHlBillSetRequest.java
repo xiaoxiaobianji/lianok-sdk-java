@@ -6,6 +6,8 @@ import com.lianok.docking.ledger.response.ApiHlBillSetResponse;
 
 /**
  * 自动分账开通
+ *
+ * @author lianok.com
  */
 public class ApiHlBillSetRequest extends AbstractDockingRequest {
 

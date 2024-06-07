@@ -1,14 +1,21 @@
 package com.lianok.core;
 
-import com.lianok.core.config.AbstractConfig;
+import com.lianok.core.client.IDockingClient;
+import com.lianok.core.client.UploadClient;
+import com.lianok.core.config.UploadConfig;
 
 import java.util.Objects;
 
+/**
+ * 上传图片
+ *
+ * @author lianok.com
+ */
 public class UploadBuilder {
 
-    private AbstractConfig config;
+    private UploadConfig config;
 
-    public UploadBuilder config(AbstractConfig config) {
+    public UploadBuilder config(UploadConfig config) {
         Objects.requireNonNull(config);
         this.config = config;
         return this;

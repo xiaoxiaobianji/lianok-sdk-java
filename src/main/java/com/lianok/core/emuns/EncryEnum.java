@@ -2,6 +2,8 @@ package com.lianok.core.emuns;
 
 /**
  * 加密方式
+ *
+ * @author lianok.com
  */
 public enum EncryEnum {
 

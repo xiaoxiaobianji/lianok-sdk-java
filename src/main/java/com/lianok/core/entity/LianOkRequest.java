@@ -2,6 +2,8 @@ package com.lianok.core.entity;
 
 /**
  * 接口请求公共参数
+ *
+ * @author lianok.com
  */
 public class LianOkRequest {
 

@@ -9,6 +9,8 @@ import java.util.*;
 
 /**
  * 请求对象基类
+ *
+ * @author lianok.com
  */
 public abstract class AbstractDockingRequest implements IDockingRequest {
 
@@ -57,17 +59,12 @@ public abstract class AbstractDockingRequest implements IDockingRequest {
         this.requestTime = requestTime;
     }
 
-    @JSONField(serialize = false)
-    public Boolean getSignByObjectMethod() {
-        return false;
-    }
-
     @Override
     @JSONField(serialize = false)
     public Map<String, Object> getParams() {
-        Map<String, Object> map = new HashMap<>();
         Class<? extends AbstractDockingRequest> aClass = getClass();
         Field[] declaredFields = aClass.getDeclaredFields();
+        Map<String, Object> map = new HashMap<>(declaredFields.length);
         for (Field declaredField : declaredFields) {
             JSONField field = declaredField.getAnnotation(JSONField.class);
             declaredField.setAccessible(true);
@@ -92,20 +89,5 @@ public abstract class AbstractDockingRequest implements IDockingRequest {
             }
         }
         return map;
-    }
-
-    /**
-     * 请求参数Json串
-     */
-    @JSONField(serialize = false)
-    private String params;
-
-    /**
-     * 是否json串加密格式：入件接口+投诉
-     * @return
-     */
-    @JSONField(serialize = false)
-    public Boolean getSignByJsonStringMethod() {
-        return false;
     }
 }

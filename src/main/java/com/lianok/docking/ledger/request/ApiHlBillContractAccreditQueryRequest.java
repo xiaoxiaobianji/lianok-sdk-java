@@ -6,6 +6,8 @@ import com.lianok.docking.ledger.response.ApiHlBillContractAccreditQueryResponse
 
 /**
  * 分账开通查询
+ *
+ * @author lianok.com
  */
 public class ApiHlBillContractAccreditQueryRequest extends AbstractDockingRequest {
 

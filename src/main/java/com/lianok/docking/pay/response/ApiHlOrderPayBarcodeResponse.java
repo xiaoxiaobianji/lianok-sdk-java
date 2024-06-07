@@ -6,6 +6,9 @@ import com.lianok.docking.pay.response.entity.Promotions;
 import java.math.BigDecimal;
 import java.util.List;
 
+/**
+ * @author lianok.com
+ */
 public class ApiHlOrderPayBarcodeResponse extends DockingResponseBase {
 
     private String orderNo;

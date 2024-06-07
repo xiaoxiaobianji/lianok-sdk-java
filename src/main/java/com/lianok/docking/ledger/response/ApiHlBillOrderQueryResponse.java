@@ -8,6 +8,8 @@ import java.util.List;
 
 /**
  * 分账查询
+ *
+ * @author lianok.com
  */
 public class ApiHlBillOrderQueryResponse extends DockingResponseBase {
 
