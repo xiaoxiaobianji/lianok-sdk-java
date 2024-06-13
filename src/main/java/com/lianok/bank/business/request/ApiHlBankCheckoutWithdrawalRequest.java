@@ -4,6 +4,8 @@ import com.lianok.bank.business.response.ApiHlBankCheckoutWithdrawalResponse;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 
+import java.math.BigDecimal;
+
 /**
  * 金额提现
  *
@@ -19,7 +21,7 @@ public class ApiHlBankCheckoutWithdrawalRequest extends AbstractDockingRequest {
     /**
      * 提现金额
      */
-    private String amount;
+    private BigDecimal amount;
     /**
      * 摘要
      */
@@ -41,11 +43,11 @@ public class ApiHlBankCheckoutWithdrawalRequest extends AbstractDockingRequest {
         this.businessNo = businessNo;
     }
 
-    public String getAmount() {
+    public BigDecimal getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(BigDecimal amount) {
         this.amount = amount;
     }
 

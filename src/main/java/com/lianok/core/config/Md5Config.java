@@ -40,7 +40,7 @@ public final class Md5Config extends AbstractConfig {
             this.env = env;
             switch (env) {
                 case TEST:
-                    url = "http://testapi.intranet.aduer.com/open/v1/api/biz/do";
+                    url = "https://testapi.intranet.aduer.com/open/v1/api/biz/do";
                     break;
                 case PRE:
                     url = "https://open.pre.lianok.com/open/v1/api/biz/do";

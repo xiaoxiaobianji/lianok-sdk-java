@@ -31,4 +31,44 @@ public class ApiHlBankRefundSnbResponse extends DockingResponseBase {
      * 0:退款中, 1:退款成功, 2:退款失败
      */
     private Integer orderStatus;
+
+    public String getRefundNo() {
+        return refundNo;
+    }
+
+    public void setRefundNo(String refundNo) {
+        this.refundNo = refundNo;
+    }
+
+    public String getThirdRefundNo() {
+        return thirdRefundNo;
+    }
+
+    public void setThirdRefundNo(String thirdRefundNo) {
+        this.thirdRefundNo = thirdRefundNo;
+    }
+
+    public String getOrderNo() {
+        return orderNo;
+    }
+
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public Integer getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(Integer orderStatus) {
+        this.orderStatus = orderStatus;
+    }
 }

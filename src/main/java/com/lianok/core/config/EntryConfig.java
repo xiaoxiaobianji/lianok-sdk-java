@@ -41,7 +41,7 @@ public final class EntryConfig extends AbstractConfig {
             this.env = env;
             switch (env) {
                 case TEST:
-                    url = "http://testapi.intranet.aduer.com/openapi/v2/api/biz/do";
+                    url = "https://testapi.intranet.aduer.com/openapi/v2/api/biz/do";
                     break;
                 case PRE:
                     url = "https://open.pre.lianok.com/openapi/v2/api/biz/do";

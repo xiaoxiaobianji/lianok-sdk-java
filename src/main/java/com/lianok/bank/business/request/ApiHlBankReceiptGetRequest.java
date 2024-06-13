@@ -1,5 +1,6 @@
 package com.lianok.bank.business.request;
 
+import com.lianok.bank.business.response.ApiHlBankReceiptGetResponse;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 
@@ -17,17 +18,17 @@ public class ApiHlBankReceiptGetRequest extends AbstractDockingRequest {
      * 3-交易退回
      * 4-充值入金
      */
-    private String receiptType;
+    private Integer receiptType;
     /**
      * 申请单号
      */
     private String orderNo;
 
-    public String getReceiptType() {
+    public Integer getReceiptType() {
         return receiptType;
     }
 
-    public void setReceiptType(String receiptType) {
+    public void setReceiptType(Integer receiptType) {
         this.receiptType = receiptType;
     }
 
@@ -46,6 +47,6 @@ public class ApiHlBankReceiptGetRequest extends AbstractDockingRequest {
 
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
-        return null;
+        return ApiHlBankReceiptGetResponse.class;
     }
 }

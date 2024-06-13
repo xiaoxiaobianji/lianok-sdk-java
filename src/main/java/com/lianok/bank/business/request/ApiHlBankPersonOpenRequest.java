@@ -4,7 +4,6 @@ import com.lianok.bank.business.response.ApiHlBankPersonOpenResponse;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 
-import java.time.LocalDateTime;
 
 /**
  * 个人账户开户
@@ -69,12 +68,12 @@ public class ApiHlBankPersonOpenRequest extends AbstractDockingRequest {
     /**
      * 证件有效期(开始时间)
      */
-    private java.time.LocalDateTime userIdStartDate;
+    private String userIdStartDate;
 
     /**
      * 证件有效期(结束时间)/长期
      */
-    private java.time.LocalDateTime userIdEndDate;
+    private String userIdEndDate;
 
     /**
      * 身份证永久有效
@@ -194,19 +193,19 @@ public class ApiHlBankPersonOpenRequest extends AbstractDockingRequest {
         this.userIdNo = userIdNo;
     }
 
-    public LocalDateTime getUserIdStartDate() {
+    public String getUserIdStartDate() {
         return userIdStartDate;
     }
 
-    public void setUserIdStartDate(LocalDateTime userIdStartDate) {
+    public void setUserIdStartDate(String userIdStartDate) {
         this.userIdStartDate = userIdStartDate;
     }
 
-    public LocalDateTime getUserIdEndDate() {
+    public String getUserIdEndDate() {
         return userIdEndDate;
     }
 
-    public void setUserIdEndDate(LocalDateTime userIdEndDate) {
+    public void setUserIdEndDate(String userIdEndDate) {
         this.userIdEndDate = userIdEndDate;
     }
 

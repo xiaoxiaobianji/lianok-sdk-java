@@ -1,5 +1,6 @@
 package com.lianok.bank.business.request;
 
+import com.lianok.bank.business.response.ApiHlBankFirmBranchResponse;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 
@@ -108,6 +109,6 @@ public class ApiHlBankFirmBranchRequest extends AbstractDockingRequest {
 
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
-        return null;
+        return ApiHlBankFirmBranchResponse.class;
     }
 }

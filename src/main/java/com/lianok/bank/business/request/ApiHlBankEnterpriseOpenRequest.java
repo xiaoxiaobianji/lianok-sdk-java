@@ -4,8 +4,6 @@ import com.lianok.bank.business.response.ApiHlBankEnterpriseOpenResponse;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 
-import java.time.LocalDateTime;
-
 /**
  * 企业账户开户
  *
@@ -67,12 +65,12 @@ public class ApiHlBankEnterpriseOpenRequest extends AbstractDockingRequest {
     /**
      * 证件有效期(开始时间)
      */
-    private java.time.LocalDateTime legalIdStartDate;
+    private String legalIdStartDate;
 
     /**
      * 证件有效期(结束时间)/长期
      */
-    private java.time.LocalDateTime legalIdEndDate;
+    private String legalIdEndDate;
 
     /**
      * 0-结束时间点 1-永久有效
@@ -162,12 +160,12 @@ public class ApiHlBankEnterpriseOpenRequest extends AbstractDockingRequest {
     /**
      * 营业期限开始日期
      */
-    private java.time.LocalDateTime businessLicenceStartDate;
+    private String businessLicenceStartDate;
 
     /**
      * 营业期限结束日期
      */
-    private java.time.LocalDateTime businessLicenceEndDate;
+    private String businessLicenceEndDate;
 
     /**
      * 营业执照是否永久有效
@@ -257,12 +255,12 @@ public class ApiHlBankEnterpriseOpenRequest extends AbstractDockingRequest {
     /**
      * 受益人证件有效期(开始时间)
      */
-    private java.time.LocalDateTime beneficiaryIdStartDate;
+    private String beneficiaryIdStartDate;
 
     /**
      * 受益人证件有效期(结束时间)/长期
      */
-    private java.time.LocalDateTime beneficiaryIdEndDate;
+    private String beneficiaryIdEndDate;
 
     /**
      * 受益人身份证永久有效
@@ -297,12 +295,12 @@ public class ApiHlBankEnterpriseOpenRequest extends AbstractDockingRequest {
     /**
      * 控股股东/实际控制人证件有效期(开始时间)
      */
-    private java.time.LocalDateTime holdIdStartDate;
+    private String holdIdStartDate;
 
     /**
      * 控股股东/实际控制人证件有效期(结束时间)
      */
-    private java.time.LocalDateTime holdIdEndDate;
+    private String holdIdEndDate;
 
     /**
      * 控股股东/实际控制人证件永久有效
@@ -328,12 +326,12 @@ public class ApiHlBankEnterpriseOpenRequest extends AbstractDockingRequest {
     /**
      * 经办人证件有效期(开始时间)
      */
-    private java.time.LocalDateTime operatorIdStartDate;
+    private String operatorIdStartDate;
 
     /**
      * 经办人证件有效期(结束时间)
      */
-    private java.time.LocalDateTime operatorIdEndDate;
+    private String operatorIdEndDate;
 
     /**
      * 经办人身份证永久有效
@@ -448,19 +446,19 @@ public class ApiHlBankEnterpriseOpenRequest extends AbstractDockingRequest {
         this.legalIdNo = legalIdNo;
     }
 
-    public LocalDateTime getLegalIdStartDate() {
+    public String getLegalIdStartDate() {
         return legalIdStartDate;
     }
 
-    public void setLegalIdStartDate(LocalDateTime legalIdStartDate) {
+    public void setLegalIdStartDate(String legalIdStartDate) {
         this.legalIdStartDate = legalIdStartDate;
     }
 
-    public LocalDateTime getLegalIdEndDate() {
+    public String getLegalIdEndDate() {
         return legalIdEndDate;
     }
 
-    public void setLegalIdEndDate(LocalDateTime legalIdEndDate) {
+    public void setLegalIdEndDate(String legalIdEndDate) {
         this.legalIdEndDate = legalIdEndDate;
     }
 
@@ -600,19 +598,19 @@ public class ApiHlBankEnterpriseOpenRequest extends AbstractDockingRequest {
         this.businessScope = businessScope;
     }
 
-    public LocalDateTime getBusinessLicenceStartDate() {
+    public String getBusinessLicenceStartDate() {
         return businessLicenceStartDate;
     }
 
-    public void setBusinessLicenceStartDate(LocalDateTime businessLicenceStartDate) {
+    public void setBusinessLicenceStartDate(String businessLicenceStartDate) {
         this.businessLicenceStartDate = businessLicenceStartDate;
     }
 
-    public LocalDateTime getBusinessLicenceEndDate() {
+    public String getBusinessLicenceEndDate() {
         return businessLicenceEndDate;
     }
 
-    public void setBusinessLicenceEndDate(LocalDateTime businessLicenceEndDate) {
+    public void setBusinessLicenceEndDate(String businessLicenceEndDate) {
         this.businessLicenceEndDate = businessLicenceEndDate;
     }
 
@@ -752,19 +750,19 @@ public class ApiHlBankEnterpriseOpenRequest extends AbstractDockingRequest {
         this.beneficiaryIdNo = beneficiaryIdNo;
     }
 
-    public LocalDateTime getBeneficiaryIdStartDate() {
+    public String getBeneficiaryIdStartDate() {
         return beneficiaryIdStartDate;
     }
 
-    public void setBeneficiaryIdStartDate(LocalDateTime beneficiaryIdStartDate) {
+    public void setBeneficiaryIdStartDate(String beneficiaryIdStartDate) {
         this.beneficiaryIdStartDate = beneficiaryIdStartDate;
     }
 
-    public LocalDateTime getBeneficiaryIdEndDate() {
+    public String getBeneficiaryIdEndDate() {
         return beneficiaryIdEndDate;
     }
 
-    public void setBeneficiaryIdEndDate(LocalDateTime beneficiaryIdEndDate) {
+    public void setBeneficiaryIdEndDate(String beneficiaryIdEndDate) {
         this.beneficiaryIdEndDate = beneficiaryIdEndDate;
     }
 
@@ -816,19 +814,19 @@ public class ApiHlBankEnterpriseOpenRequest extends AbstractDockingRequest {
         this.holdIdNo = holdIdNo;
     }
 
-    public LocalDateTime getHoldIdStartDate() {
+    public String getHoldIdStartDate() {
         return holdIdStartDate;
     }
 
-    public void setHoldIdStartDate(LocalDateTime holdIdStartDate) {
+    public void setHoldIdStartDate(String holdIdStartDate) {
         this.holdIdStartDate = holdIdStartDate;
     }
 
-    public LocalDateTime getHoldIdEndDate() {
+    public String getHoldIdEndDate() {
         return holdIdEndDate;
     }
 
-    public void setHoldIdEndDate(LocalDateTime holdIdEndDate) {
+    public void setHoldIdEndDate(String holdIdEndDate) {
         this.holdIdEndDate = holdIdEndDate;
     }
 
@@ -864,19 +862,19 @@ public class ApiHlBankEnterpriseOpenRequest extends AbstractDockingRequest {
         this.operatorIdNo = operatorIdNo;
     }
 
-    public LocalDateTime getOperatorIdStartDate() {
+    public String getOperatorIdStartDate() {
         return operatorIdStartDate;
     }
 
-    public void setOperatorIdStartDate(LocalDateTime operatorIdStartDate) {
+    public void setOperatorIdStartDate(String operatorIdStartDate) {
         this.operatorIdStartDate = operatorIdStartDate;
     }
 
-    public LocalDateTime getOperatorIdEndDate() {
+    public String getOperatorIdEndDate() {
         return operatorIdEndDate;
     }
 
-    public void setOperatorIdEndDate(LocalDateTime operatorIdEndDate) {
+    public void setOperatorIdEndDate(String operatorIdEndDate) {
         this.operatorIdEndDate = operatorIdEndDate;
     }
 

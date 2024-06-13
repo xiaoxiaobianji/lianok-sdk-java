@@ -1,6 +1,7 @@
 package com.lianok.core.config;
 
 import com.lianok.core.emuns.EncryEnum;
+import com.lianok.core.emuns.EnvEnum;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.utils.CollectionUtils;
 import com.lianok.core.utils.SecurityUtils;
@@ -28,19 +29,34 @@ public final class UploadConfig extends AbstractConfig {
 
     public static class Builder extends AbstractConfigBuilder<UploadConfig.Builder> {
 
+        private String url;
         @Override
         protected UploadConfig.Builder self() {
             return this;
         }
 
-        public UploadConfig.Builder config(String authCode, String key) {
+        public UploadConfig.Builder config(EnvEnum env, String authCode, String key) {
+            this.env = env;
+            switch (env) {
+                case TEST:
+                    url = "https://testapi.intranet.aduer.com/openapi/v2/api/biz/file";
+                    break;
+                case PRE:
+                    url = "https://open.pre.lianok.com/openapi/v2/api/biz/file";
+                    break;
+                case PUBLISH:
+                    url = "https://open.lianok.com/openapi/v2/api/biz/file";
+                    break;
+                default:
+                    throw new NullPointerException();
+            }
             this.authCode = authCode;
             this.key = key;
             return this;
         }
 
         public UploadConfig build() {
-            return new UploadConfig("https://entry.openapi/v2/api/biz/file", Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key));
+            return new UploadConfig(url, Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key));
         }
     }
 

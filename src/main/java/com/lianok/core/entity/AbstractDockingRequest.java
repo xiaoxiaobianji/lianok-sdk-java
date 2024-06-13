@@ -47,7 +47,7 @@ public abstract class AbstractDockingRequest implements IDockingRequest {
         return versionNo;
     }
 
-    public void setVersionNo(String versionNo) {
+    void setVersionNo(String versionNo) {
         this.versionNo = versionNo;
     }
 

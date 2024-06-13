@@ -4,7 +4,6 @@ import com.lianok.bank.business.response.ApiHlBankEnterpriseInfoUpdateResponse;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 
-import java.time.LocalDateTime;
 
 /**
  * 企业基础信息修改
@@ -43,12 +42,12 @@ public class ApiHlBankEnterpriseInfoUpdateRequest extends AbstractDockingRequest
     /**
      * 证件有效期(开始时间)
      */
-    private java.time.LocalDateTime legalIdStartDate;
+    private String legalIdStartDate;
 
     /**
-     * 证件有效期(结束时间)/长期
+     * 证件有效期(结束时间)
      */
-    private java.time.LocalDateTime legalIdEndDate;
+    private String legalIdEndDate;
 
     /**
      * 是否永久有效
@@ -88,12 +87,12 @@ public class ApiHlBankEnterpriseInfoUpdateRequest extends AbstractDockingRequest
     /**
      * 营业期限开始日期
      */
-    private java.time.LocalDateTime businessLicenceStartDate;
+    private String businessLicenceStartDate;
 
     /**
      * 营业期限结束日期
      */
-    private java.time.LocalDateTime businessLicenceEndDate;
+    private String businessLicenceEndDate;
 
     /**
      * 是否永久有效
@@ -148,19 +147,19 @@ public class ApiHlBankEnterpriseInfoUpdateRequest extends AbstractDockingRequest
         this.legalIdNo = legalIdNo;
     }
 
-    public LocalDateTime getLegalIdStartDate() {
+    public String getLegalIdStartDate() {
         return legalIdStartDate;
     }
 
-    public void setLegalIdStartDate(LocalDateTime legalIdStartDate) {
+    public void setLegalIdStartDate(String legalIdStartDate) {
         this.legalIdStartDate = legalIdStartDate;
     }
 
-    public LocalDateTime getLegalIdEndDate() {
+    public String getLegalIdEndDate() {
         return legalIdEndDate;
     }
 
-    public void setLegalIdEndDate(LocalDateTime legalIdEndDate) {
+    public void setLegalIdEndDate(String legalIdEndDate) {
         this.legalIdEndDate = legalIdEndDate;
     }
 
@@ -220,19 +219,19 @@ public class ApiHlBankEnterpriseInfoUpdateRequest extends AbstractDockingRequest
         this.businessScope = businessScope;
     }
 
-    public LocalDateTime getBusinessLicenceStartDate() {
+    public String getBusinessLicenceStartDate() {
         return businessLicenceStartDate;
     }
 
-    public void setBusinessLicenceStartDate(LocalDateTime businessLicenceStartDate) {
+    public void setBusinessLicenceStartDate(String businessLicenceStartDate) {
         this.businessLicenceStartDate = businessLicenceStartDate;
     }
 
-    public LocalDateTime getBusinessLicenceEndDate() {
+    public String getBusinessLicenceEndDate() {
         return businessLicenceEndDate;
     }
 
-    public void setBusinessLicenceEndDate(LocalDateTime businessLicenceEndDate) {
+    public void setBusinessLicenceEndDate(String businessLicenceEndDate) {
         this.businessLicenceEndDate = businessLicenceEndDate;
     }
 
