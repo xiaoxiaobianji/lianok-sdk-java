@@ -42,10 +42,10 @@ public final class UploadConfig extends AbstractConfig {
                     url = "https://testapi.intranet.aduer.com/openapi/v2/api/biz/file";
                     break;
                 case PRE:
-                    url = "https://open.pre.lianok.com/openapi/v2/api/biz/file";
+                    url = "https://entry.pre.lianok.com/openapi/v2/api/biz/file";
                     break;
                 case PUBLISH:
-                    url = "https://open.lianok.com/openapi/v2/api/biz/file";
+                    url = "https://entry.lianok.com/openapi/v2/api/biz/file";
                     break;
                 default:
                     throw new NullPointerException();

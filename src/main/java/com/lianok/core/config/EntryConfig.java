@@ -44,7 +44,7 @@ public final class EntryConfig extends AbstractConfig {
                     url = "https://testapi.intranet.aduer.com/openapi/v2/api/biz/do";
                     break;
                 case PRE:
-                    url = "https://open.pre.lianok.com/openapi/v2/api/biz/do";
+                    url = "https://entry.pre.lianok.com/openapi/v2/api/biz/do";
                     break;
                 case PUBLISH:
                     url = "https://entry.lianok.com/openapi/v2/api/biz/do";

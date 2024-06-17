@@ -1,5 +1,6 @@
 package com.lianok.entry.merchant.request;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.lianok.core.entity.AbstractEntryRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.entry.merchant.response.ApiHlShopUpdateMerchantResponse;
@@ -38,7 +39,8 @@ public class ApiHlShopUpdateMerchantRequest extends AbstractEntryRequest {
     private String merchantImg;
     private String merchantFaceImg;
     private String merchantInnerImg;
-    private String merchantCashdeskImg;
+    @JSONField(name = "merchantCashdeskImg")
+    private String merchantCashDeskImg;
     private String mccCode;
     private String consignmentImg;
 
@@ -279,12 +281,12 @@ public class ApiHlShopUpdateMerchantRequest extends AbstractEntryRequest {
         this.merchantInnerImg = merchantInnerImg;
     }
 
-    public String getMerchantCashdeskImg() {
-        return merchantCashdeskImg;
+    public String getMerchantCashDeskImg() {
+        return merchantCashDeskImg;
     }
 
-    public void setMerchantCashdeskImg(String merchantCashdeskImg) {
-        this.merchantCashdeskImg = merchantCashdeskImg;
+    public void setMerchantCashDeskImg(String merchantCashDeskImg) {
+        this.merchantCashDeskImg = merchantCashDeskImg;
     }
 
     public String getMccCode() {

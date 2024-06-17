@@ -12,8 +12,8 @@ public class ApiHlShopQueryBranchShopListRequest extends AbstractEntryRequest {
     private String merchantNo;
     private String shopNo;
     private String shopName;
-    private int pageSize;
-    private int currentPage;
+    private Integer pageSize;
+    private Integer currentPage;
 
     public String getMerchantNo() {
         return merchantNo;
@@ -39,19 +39,19 @@ public class ApiHlShopQueryBranchShopListRequest extends AbstractEntryRequest {
         this.shopName = shopName;
     }
 
-    public int getPageSize() {
+    public Integer getPageSize() {
         return pageSize;
     }
 
-    public void setPageSize(int pageSize) {
+    public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
 
-    public int getCurrentPage() {
+    public Integer getCurrentPage() {
         return currentPage;
     }
 
-    public void setCurrentPage(int currentPage) {
+    public void setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
     }
 
