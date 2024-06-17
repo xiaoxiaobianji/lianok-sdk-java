@@ -15,6 +15,21 @@
 2. 构建调用接口Service用于后续接口请求
 3. 发起请求并处理响应或异常
 
+### pom.xml引用
+```xml
+<dependency>
+  <groupId>com.lianok.docking</groupId>
+  <artifactId>lianok-sdk-java</artifactId>
+  <version>1.1.6-RELEASE</version>
+</dependency>
+<dependency>
+  <groupId>com.alibaba</groupId>
+  <artifactId>fastjson</artifactId>
+  <version>1.2.83</version>
+</dependency>
+```
+
+### 接口请求
 ```java
 package com.lianok.sdk.java;
 
