@@ -1,9 +1,14 @@
 package com.lianok.core;
 
+import com.lianok.core.client.IDockingClient;
+import com.lianok.core.client.ResponseClient;
 import com.lianok.core.config.AbstractConfig;
 
 import java.util.Objects;
 
+/**
+ * @author lianok.com
+ */
 public class ClientBuilder {
 
     private AbstractConfig config;

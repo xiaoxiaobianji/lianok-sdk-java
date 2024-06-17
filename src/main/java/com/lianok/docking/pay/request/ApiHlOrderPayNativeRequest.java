@@ -8,6 +8,8 @@ import java.math.BigDecimal;
 
 /**
  * 适用于消费者通过扫描二维码或直接访问支付链接发起支付，完成支付的场景。支持微信、支付宝。
+ *
+ * @author lianok.com
  */
 public class ApiHlOrderPayNativeRequest extends AbstractDockingRequest {
 

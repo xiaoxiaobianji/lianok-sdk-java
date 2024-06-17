@@ -2,6 +2,9 @@ package com.lianok.docking.upload.response;
 
 import com.lianok.core.entity.DockingResponseBase;
 
+/**
+ * @author lianok.com
+ */
 public class ApiHlShopUploadImageResponse extends DockingResponseBase {
 
     private String imgUrl;

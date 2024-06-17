@@ -6,6 +6,8 @@ import com.lianok.docking.ledger.response.ApiHlShareOrderCancelResponse;
 
 /**
  * 分账取消
+ *
+ * @author lianok.com
  */
 public class ApiHlShareOrderCancelRequest extends AbstractDockingRequest {
 

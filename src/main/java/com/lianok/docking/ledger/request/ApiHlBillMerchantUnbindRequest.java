@@ -6,6 +6,8 @@ import com.lianok.docking.ledger.response.ApiHlBillMerchantUnbindResponse;
 
 /**
  * 分账关系解绑
+ *
+ * @author lianok.com
  */
 public class ApiHlBillMerchantUnbindRequest extends AbstractDockingRequest {
 

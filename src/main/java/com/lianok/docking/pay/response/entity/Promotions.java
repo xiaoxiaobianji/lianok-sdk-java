@@ -2,6 +2,9 @@ package com.lianok.docking.pay.response.entity;
 
 import java.math.BigDecimal;
 
+/**
+ * @author lianok.com
+ */
 public class Promotions {
     private Integer type;
     private String typeDesc;

@@ -1,23 +1,27 @@
 package com.lianok.core.config;
 
 import com.lianok.core.emuns.EncryEnum;
-import com.lianok.core.emuns.EnvEnum;
 import com.lianok.core.entity.AbstractDockingRequest;
 
 import java.util.Objects;
 
+/**
+ * @author lianok.com
+ */
 public final class Rsa2Config extends AbstractConfig {
 
     public EncryEnum getEncryEnum() {
         return EncryEnum.RSA2048;
     }
 
-    private Rsa2Config(EnvEnum env, String authCode, String salt) {
-        super(env, authCode, salt);
+    private Rsa2Config(String url, String authCode, String salt) {
+        super(url, authCode, salt);
     }
 
 
     public static class Builder extends AbstractConfigBuilder<Builder> {
+
+        private String url;
 
         public Builder() {
         }
@@ -28,7 +32,7 @@ public final class Rsa2Config extends AbstractConfig {
         }
 
         public Rsa2Config build() {
-            return new Rsa2Config(Objects.requireNonNull(this.env), Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key));
+            return new Rsa2Config(url, Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key));
         }
     }
 

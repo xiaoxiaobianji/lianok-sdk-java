@@ -8,6 +8,8 @@ import java.math.BigDecimal;
 
 /**
  * 延时结算确认
+ *
+ * @author lianok.com
  */
 public class ApiHlOrderDeferredSettlementConfirmRequest extends AbstractDockingRequest {
 

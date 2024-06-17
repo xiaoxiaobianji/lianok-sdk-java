@@ -6,6 +6,8 @@ import com.lianok.docking.fund.settle.response.ApiHlOrderDeferredSettlementRevok
 
 /**
  * 延时结算交易撤销
+ *
+ * @author lianok.com
  */
 public class ApiHlOrderDeferredSettlementRevokeRequest extends AbstractDockingRequest {
 

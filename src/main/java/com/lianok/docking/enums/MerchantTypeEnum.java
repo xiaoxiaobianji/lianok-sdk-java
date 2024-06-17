@@ -1,5 +1,8 @@
 package com.lianok.docking.enums;
 
+/**
+ * @author lianok.com
+ */
 public enum MerchantTypeEnum {
 
     /**

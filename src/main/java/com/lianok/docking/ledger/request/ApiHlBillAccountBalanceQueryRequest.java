@@ -4,6 +4,9 @@ import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.ledger.response.ApiHlBillAccountBalanceQueryResponse;
 
+/**
+ * @author lianok.com
+ */
 public class ApiHlBillAccountBalanceQueryRequest extends AbstractDockingRequest {
 
     /**

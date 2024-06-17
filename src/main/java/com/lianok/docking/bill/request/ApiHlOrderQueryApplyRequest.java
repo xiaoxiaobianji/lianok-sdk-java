@@ -6,6 +6,8 @@ import com.lianok.docking.bill.response.ApiHlOrderQueryApplyResponse;
 
 /**
  * 对账单查询
+ *
+ * @author lianok.com
  */
 public class ApiHlOrderQueryApplyRequest extends AbstractDockingRequest {
 

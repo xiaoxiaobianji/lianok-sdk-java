@@ -4,6 +4,8 @@ import com.lianok.core.emuns.EnvEnum;
 
 /**
  * 配置构建
+ *
+ * @author lianok.com
  */
 public abstract class AbstractConfigBuilder<T extends AbstractConfigBuilder<T>> {
 

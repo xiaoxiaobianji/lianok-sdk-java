@@ -2,6 +2,9 @@ package com.lianok.docking.pay.response;
 
 import com.lianok.core.entity.DockingResponseBase;
 
+/**
+ * @author lianok.com
+ */
 public class ApiHlOrderPrePayAppletResponse extends DockingResponseBase {
 
     private String merchantNo;

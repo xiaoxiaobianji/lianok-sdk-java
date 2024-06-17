@@ -1,5 +1,8 @@
 package com.lianok.core.entity;
 
+/**
+ * @author lianok.com
+ */
 public class ResponseBase {
 
     private static final long serialVersionUID = 4307287190580284170L;

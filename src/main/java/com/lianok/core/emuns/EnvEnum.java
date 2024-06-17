@@ -2,6 +2,8 @@ package com.lianok.core.emuns;
 
 /**
  * 对接环境
+ *
+ * @author lianok.com
  */
 public enum EnvEnum {
 

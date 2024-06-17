@@ -9,6 +9,8 @@ import java.util.*;
 
 /**
  * 请求对象基类
+ *
+ * @author lianok.com
  */
 public abstract class AbstractDockingRequest implements IDockingRequest {
 
@@ -45,7 +47,7 @@ public abstract class AbstractDockingRequest implements IDockingRequest {
         return versionNo;
     }
 
-    public void setVersionNo(String versionNo) {
+    void setVersionNo(String versionNo) {
         this.versionNo = versionNo;
     }
 
@@ -57,17 +59,12 @@ public abstract class AbstractDockingRequest implements IDockingRequest {
         this.requestTime = requestTime;
     }
 
-    @JSONField(serialize = false)
-    public Boolean getSignByObjectMethod() {
-        return false;
-    }
-
     @Override
     @JSONField(serialize = false)
     public Map<String, Object> getParams() {
-        Map<String, Object> map = new HashMap<>();
         Class<? extends AbstractDockingRequest> aClass = getClass();
         Field[] declaredFields = aClass.getDeclaredFields();
+        Map<String, Object> map = new HashMap<>(declaredFields.length);
         for (Field declaredField : declaredFields) {
             JSONField field = declaredField.getAnnotation(JSONField.class);
             declaredField.setAccessible(true);

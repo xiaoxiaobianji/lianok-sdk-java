@@ -6,6 +6,9 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+/**
+ * @author lianok.com
+ */
 public class ApiHlFundAccountOrderQueryResponse extends DockingResponseBase {
 
     private String orderNo;

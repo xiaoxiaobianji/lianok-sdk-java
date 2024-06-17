@@ -8,6 +8,8 @@ import java.math.BigDecimal;
 
 /**
  * 银行卡支付
+ *
+ * @author lianok.com
  */
 public class ApiHlOrderPayBankRequest extends AbstractDockingRequest {
 

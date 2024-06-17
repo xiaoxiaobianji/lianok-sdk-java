@@ -8,6 +8,8 @@ import java.math.BigDecimal;
 
 /**
  * 付款码支付
+ *
+ * @author lianok.com
  */
 public class ApiHlOrderPayBarcodeRequest extends AbstractDockingRequest {
 

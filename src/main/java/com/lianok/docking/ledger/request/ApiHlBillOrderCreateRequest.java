@@ -10,6 +10,8 @@ import java.util.List;
 
 /**
  * 余额分账申请
+ *
+ * @author lianok.com
  */
 public class ApiHlBillOrderCreateRequest extends AbstractDockingRequest {
 

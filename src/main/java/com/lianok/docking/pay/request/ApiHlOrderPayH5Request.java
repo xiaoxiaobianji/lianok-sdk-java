@@ -9,6 +9,8 @@ import java.math.BigDecimal;
 /**
  * H5预下单
  * 适用于用户选择支付方式(微信或支付宝)完成下单操作后跳转到H5页面完成支付的场景。
+ *
+ * @author lianok.com
  */
 public class ApiHlOrderPayH5Request extends AbstractDockingRequest {
 

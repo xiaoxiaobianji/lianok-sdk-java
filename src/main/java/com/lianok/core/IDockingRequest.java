@@ -2,6 +2,9 @@ package com.lianok.core;
 
 import java.util.Map;
 
+/**
+ * @author lianok.com
+ */
 public interface IDockingRequest {
 
     /**

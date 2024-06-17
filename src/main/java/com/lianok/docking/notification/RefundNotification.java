@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 
 /**
  * 退款异步通知
+ *
+ * @author lianok.com
  */
 public class RefundNotification {
 

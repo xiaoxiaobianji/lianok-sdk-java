@@ -4,6 +4,8 @@ import com.lianok.core.utils.StrUtils;
 
 /**
  * 银行卡类型枚举
+ *
+ * @author lianok.com
  */
 public enum BankCardTypeEnum {
 

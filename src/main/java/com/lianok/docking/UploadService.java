@@ -1,15 +1,24 @@
 package com.lianok.docking;
 
-import com.lianok.core.IDockingClient;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.lianok.core.client.IDockingClient;
 import com.lianok.core.UploadBuilder;
-import com.lianok.core.config.AbstractConfig;
+import com.lianok.core.config.UploadConfig;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.core.entity.ResponseResultBase;
 
+import java.lang.reflect.Type;
+
+/**
+ * 图片上传
+ *
+ * @author lianok.com
+ */
 public class UploadService {
 
-    private IDockingClient client;
+    private final IDockingClient client;
 
     private UploadService(IDockingClient client) {
         this.client = client;
@@ -18,7 +27,7 @@ public class UploadService {
     public static class Uploader {
         private IDockingClient client;
 
-        public Uploader config(AbstractConfig config) {
+        public Uploader config(UploadConfig config) {
             this.client = new UploadBuilder().config(config).build();
             return this;
         }
@@ -34,6 +43,14 @@ public class UploadService {
     }
 
     public <T extends DockingResponseBase> ResponseResultBase<T> execute(AbstractDockingRequest request) throws Exception {
-        return (ResponseResultBase<T>) client.execute(request);
+        String content = client.execute(request);
+        ResponseResultBase<T> result = JSONObject.parseObject(content, ResponseResultBase.class);
+        if (result.success()) {
+            JSONObject jsonObject = JSONObject.parseObject(content);
+            String respData = jsonObject.getString("data");
+            T response = JSON.parseObject(respData, (Type) request.getResponseClass());
+            result.setData(response);
+        }
+        return result;
     }
 }

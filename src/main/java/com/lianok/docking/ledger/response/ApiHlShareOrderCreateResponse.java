@@ -6,6 +6,9 @@ import com.lianok.docking.ledger.request.ApiHlShareOrderCreateRequest;
 import java.math.BigDecimal;
 import java.util.List;
 
+/**
+ * @author lianok.com
+ */
 public class ApiHlShareOrderCreateResponse extends DockingResponseBase {
 
     private String merchantNo;

@@ -6,6 +6,8 @@ import java.util.List;
 
 /**
  * 分账关系查询
+ *
+ * @author lianok.com
  */
 public class ApiHlBillMerchantQueryResponse extends DockingResponseBase {
 

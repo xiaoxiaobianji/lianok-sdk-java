@@ -6,6 +6,8 @@ import com.lianok.docking.fund.pay.response.ApiHlFundAccountOrderQueryResponse;
 
 /**
  * 代付订单详情
+ *
+ * @author lianok.com
  */
 public class ApiHlFundAccountOrderQueryRequest extends AbstractDockingRequest {
 

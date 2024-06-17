@@ -10,6 +10,8 @@ import java.math.BigDecimal;
 /**
  * 小程序支付接口
  * 通过接口可以获取微信/支付宝小程序支付需要的TradeNo/JSPayInfo
+ *
+ * @author lianok.com
  */
 public class ApiHlOrderPayAppletRequest extends AbstractDockingRequest {
 

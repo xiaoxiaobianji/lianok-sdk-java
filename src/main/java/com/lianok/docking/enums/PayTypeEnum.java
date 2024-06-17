@@ -4,6 +4,8 @@ import com.lianok.core.utils.StrUtils;
 
 /**
  * 支付方式枚举
+ *
+ * @author lianok.com
  */
 public enum PayTypeEnum {
     /**

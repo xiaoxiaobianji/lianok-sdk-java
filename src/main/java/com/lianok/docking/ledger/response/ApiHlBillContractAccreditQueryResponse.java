@@ -4,6 +4,8 @@ import com.lianok.core.entity.DockingResponseBase;
 
 /**
  * 分账开通查询
+ *
+ * @author lianok.com
  */
 public class ApiHlBillContractAccreditQueryResponse extends DockingResponseBase {
 

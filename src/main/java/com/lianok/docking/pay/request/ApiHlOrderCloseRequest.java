@@ -7,6 +7,8 @@ import com.lianok.docking.pay.response.ApiHlOrderCloseResponse;
 /**
  * 订单关闭
  * 对接商可根据此接口对‘待支付、支付中’状态订单进行关闭订单操作
+ *
+ * @author lianok.com
  */
 public class ApiHlOrderCloseRequest extends AbstractDockingRequest {
 
