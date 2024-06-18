@@ -18,6 +18,7 @@ public class ApiHlOrderPayBarcodeResponse extends DockingResponseBase {
     private BigDecimal payAmount;
     private BigDecimal actualAmount;
     private String payTime;
+    private String payWay;
     private Integer orderStatus;
     private String merchantNo;
     private String cashierNo;
