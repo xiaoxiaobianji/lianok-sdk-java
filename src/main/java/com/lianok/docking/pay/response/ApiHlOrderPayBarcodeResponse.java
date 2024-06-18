@@ -18,6 +18,7 @@ public class ApiHlOrderPayBarcodeResponse extends DockingResponseBase {
     private BigDecimal payAmount;
     private BigDecimal actualAmount;
     private String payTime;
+    private String payWay;
     private Integer orderStatus;
     private String merchantNo;
     private String cashierNo;
@@ -54,6 +55,14 @@ public class ApiHlOrderPayBarcodeResponse extends DockingResponseBase {
 
     public String getPayTime() {
         return payTime;
+    }
+
+    public String getPayWay() {
+        return payWay;
+    }
+
+    public void setPayWay(String payWay) {
+        this.payWay = payWay;
     }
 
     public void setPayTime(String payTime) {
