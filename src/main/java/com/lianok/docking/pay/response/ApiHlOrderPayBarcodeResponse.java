@@ -57,6 +57,14 @@ public class ApiHlOrderPayBarcodeResponse extends DockingResponseBase {
         return payTime;
     }
 
+    public String getPayWay() {
+        return payWay;
+    }
+
+    public void setPayWay(String payWay) {
+        this.payWay = payWay;
+    }
+
     public void setPayTime(String payTime) {
         this.payTime = payTime;
     }
