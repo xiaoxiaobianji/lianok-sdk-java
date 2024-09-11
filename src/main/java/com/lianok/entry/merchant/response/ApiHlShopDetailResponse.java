@@ -61,8 +61,8 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
     private Integer status;
     private String channelMerchantNo;
     private String mccCode;
-    private Long lng;
-    private Long lat;
+    private float lng;
+    private float lat;
     private LocalDateTime createTime;
     private String fatherCode;
     private String grandpaCode;
@@ -496,19 +496,19 @@ public class ApiHlShopDetailResponse extends DockingResponseBase {
         this.mccCode = mccCode;
     }
 
-    public Long getLng() {
+    public float getLng() {
         return lng;
     }
 
-    public void setLng(Long lng) {
+    public void setLng(float lng) {
         this.lng = lng;
     }
 
-    public Long getLat() {
+    public float getLat() {
         return lat;
     }
 
-    public void setLat(Long lat) {
+    public void setLat(float lat) {
         this.lat = lat;
     }
 
