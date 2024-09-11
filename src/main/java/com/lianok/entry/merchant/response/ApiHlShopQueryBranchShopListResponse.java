@@ -3,127 +3,168 @@ package com.lianok.entry.merchant.response;
 import com.alibaba.fastjson.annotation.JSONField;
 import com.lianok.core.entity.DockingResponseBase;
 
+import java.util.List;
+
 /**
  * @author lianok.com
  */
 public class ApiHlShopQueryBranchShopListResponse extends DockingResponseBase {
 
-    private String shopNo;
-    private String shopName;
-    private String provinceCode;
-    private String provinceName;
-    private String cityCode;
-    private String cityName;
-    private String areaCode;
-    private String areaName;
-    private String address;
-    private String contacter;
-    private String phone;
-    private String mccCode;
-    @JSONField(name = "mccCodeCN")
-    private String mccCodeName;
+    private Integer totalCount;
+    private Integer pageSize;
+    private Integer currentPage;
+    public List<ApiHlShopQueryBranchShopInfo> branchShopList;
 
-    public String getShopNo() {
-        return shopNo;
+    public Integer getTotalCount() {
+        return totalCount;
     }
 
-    public void setShopNo(String shopNo) {
-        this.shopNo = shopNo;
+    public void setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
     }
 
-    public String getShopName() {
-        return shopName;
+    public Integer getPageSize() {
+        return pageSize;
     }
 
-    public void setShopName(String shopName) {
-        this.shopName = shopName;
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 
-    public String getProvinceCode() {
-        return provinceCode;
+    public Integer getCurrentPage() {
+        return currentPage;
     }
 
-    public void setProvinceCode(String provinceCode) {
-        this.provinceCode = provinceCode;
+    public void setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
     }
 
-    public String getProvinceName() {
-        return provinceName;
+    public List<ApiHlShopQueryBranchShopInfo> getBranchShopList() {
+        return branchShopList;
     }
 
-    public void setProvinceName(String provinceName) {
-        this.provinceName = provinceName;
+    public void setBranchShopList(List<ApiHlShopQueryBranchShopInfo> branchShopList) {
+        this.branchShopList = branchShopList;
     }
 
-    public String getCityCode() {
-        return cityCode;
-    }
+    public static class ApiHlShopQueryBranchShopInfo {
+        private String shopNo;
+        private String shopName;
+        private String provinceCode;
+        private String provinceName;
+        private String cityCode;
+        private String cityName;
+        private String areaCode;
+        private String areaName;
+        private String address;
+        private String contacter;
+        private String phone;
+        private String mccCode;
+        @JSONField(name = "mccCodeCN")
+        private String mccCodeName;
 
-    public void setCityCode(String cityCode) {
-        this.cityCode = cityCode;
-    }
+        public String getShopNo() {
+            return shopNo;
+        }
 
-    public String getCityName() {
-        return cityName;
-    }
+        public void setShopNo(String shopNo) {
+            this.shopNo = shopNo;
+        }
 
-    public void setCityName(String cityName) {
-        this.cityName = cityName;
-    }
+        public String getShopName() {
+            return shopName;
+        }
 
-    public String getAreaCode() {
-        return areaCode;
-    }
+        public void setShopName(String shopName) {
+            this.shopName = shopName;
+        }
 
-    public void setAreaCode(String areaCode) {
-        this.areaCode = areaCode;
-    }
+        public String getProvinceCode() {
+            return provinceCode;
+        }
 
-    public String getAreaName() {
-        return areaName;
-    }
+        public void setProvinceCode(String provinceCode) {
+            this.provinceCode = provinceCode;
+        }
 
-    public void setAreaName(String areaName) {
-        this.areaName = areaName;
-    }
+        public String getProvinceName() {
+            return provinceName;
+        }
 
-    public String getAddress() {
-        return address;
-    }
+        public void setProvinceName(String provinceName) {
+            this.provinceName = provinceName;
+        }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+        public String getCityCode() {
+            return cityCode;
+        }
 
-    public String getContacter() {
-        return contacter;
-    }
+        public void setCityCode(String cityCode) {
+            this.cityCode = cityCode;
+        }
 
-    public void setContacter(String contacter) {
-        this.contacter = contacter;
-    }
+        public String getCityName() {
+            return cityName;
+        }
 
-    public String getPhone() {
-        return phone;
-    }
+        public void setCityName(String cityName) {
+            this.cityName = cityName;
+        }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+        public String getAreaCode() {
+            return areaCode;
+        }
 
-    public String getMccCode() {
-        return mccCode;
-    }
+        public void setAreaCode(String areaCode) {
+            this.areaCode = areaCode;
+        }
 
-    public void setMccCode(String mccCode) {
-        this.mccCode = mccCode;
-    }
+        public String getAreaName() {
+            return areaName;
+        }
 
-    public String getMccCodeName() {
-        return mccCodeName;
-    }
+        public void setAreaName(String areaName) {
+            this.areaName = areaName;
+        }
 
-    public void setMccCodeName(String mccCodeName) {
-        this.mccCodeName = mccCodeName;
+        public String getAddress() {
+            return address;
+        }
+
+        public void setAddress(String address) {
+            this.address = address;
+        }
+
+        public String getContacter() {
+            return contacter;
+        }
+
+        public void setContacter(String contacter) {
+            this.contacter = contacter;
+        }
+
+        public String getPhone() {
+            return phone;
+        }
+
+        public void setPhone(String phone) {
+            this.phone = phone;
+        }
+
+        public String getMccCode() {
+            return mccCode;
+        }
+
+        public void setMccCode(String mccCode) {
+            this.mccCode = mccCode;
+        }
+
+        public String getMccCodeName() {
+            return mccCodeName;
+        }
+
+        public void setMccCodeName(String mccCodeName) {
+            this.mccCodeName = mccCodeName;
+        }
     }
 }

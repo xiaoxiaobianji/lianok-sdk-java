@@ -1,8 +1,14 @@
 package com.lianok.core.utils;
 
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 import java.io.*;
-import java.net.HttpURLConnection;
 import java.net.URL;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
 import java.util.Iterator;
 import java.util.Map;
 
@@ -25,15 +31,18 @@ public final class HttpUtil {
     public static String doPost(String httpUrl, String param, Integer timeout) throws Exception {
         StringBuilder result = new StringBuilder();
         //连接
-        HttpURLConnection connection = null;
+        HttpsURLConnection connection = null;
         OutputStream os = null;
         InputStream is = null;
         BufferedReader br = null;
         try {
             //创建连接对象
             URL url = new URL(httpUrl);
+            SSLContext context = createIgnoreVerifySSL();
+            connection = (HttpsURLConnection) url.openConnection();
+            connection.setSSLSocketFactory(context.getSocketFactory());
             //创建连接
-            connection = (HttpURLConnection) url.openConnection();
+            // connection = (HttpURLConnection) url.openConnection();
             //设置请求方法
             connection.setRequestMethod("POST");
             //设置连接超时时间
@@ -96,13 +105,16 @@ public final class HttpUtil {
         return result.toString();
     }
 
-    public static String upload(String httpUrl, Map<String, String> param, Map<String, byte[]> fileMap, Integer timeout) throws IOException {
-        HttpURLConnection connection = null;
+    public static String upload(String httpUrl, Map<String, String> param, Map<String, byte[]> fileMap, Integer timeout) throws IOException, KeyManagementException, NoSuchAlgorithmException {
+        HttpsURLConnection connection = null;
         try {
             //创建连接对象
             URL url = new URL(httpUrl);
             //创建连接
-            connection = (HttpURLConnection) url.openConnection();
+            SSLContext context = createIgnoreVerifySSL();
+            connection = (HttpsURLConnection) url.openConnection();
+            connection.setSSLSocketFactory(context.getSocketFactory());
+            //connection = (HttpURLConnection) url.openConnection();
             //设置请求方法
             connection.setRequestMethod("POST");
             //设置连接超时时间
@@ -185,6 +197,40 @@ public final class HttpUtil {
                 connection.disconnect();
             }
         }
+    }
+
+
+    /**
+     * 绕过SSL、TLS证书
+     *
+     * @return
+     * @throws NoSuchAlgorithmException
+     * @throws KeyManagementException
+     */
+    private static SSLContext createIgnoreVerifySSL() throws NoSuchAlgorithmException, KeyManagementException {
+        SSLContext sc = SSLContext.getInstance("TLS");
+        // 实现一个X509TrustManager接口，用于绕过验证，不用修改里面的方法
+        X509TrustManager trustManager = new X509TrustManager() {
+            @Override
+            public void checkClientTrusted(
+                    java.security.cert.X509Certificate[] paramArrayOfX509Certificate,
+                    String paramString) throws CertificateException {
+            }
+
+            @Override
+            public void checkServerTrusted(
+                    java.security.cert.X509Certificate[] paramArrayOfX509Certificate,
+                    String paramString) throws CertificateException {
+            }
+
+            @Override
+            public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                return null;
+            }
+        };
+
+        sc.init(null, new TrustManager[]{trustManager}, null);
+        return sc;
     }
 
 }

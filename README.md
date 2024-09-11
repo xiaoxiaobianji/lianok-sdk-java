@@ -12,6 +12,8 @@
 ## 快速使用
 以下这段代码示例向您展示了使用SDK调用一个API的主要步骤：
 1. 创建对接配置，用于构建调用接口Service
+    1. 交易请使用“Md5Config”
+    2. 其他使用“EntryConfig”
 2. 构建调用接口Service用于后续接口请求
 3. 发起请求并处理响应或异常
 
@@ -20,7 +22,7 @@
 <dependency>
   <groupId>com.lianok.docking</groupId>
   <artifactId>lianok-sdk-java</artifactId>
-  <version>1.1.6-RELEASE</version>
+  <version>1.1.7-RELEASE</version>
 </dependency>
 <dependency>
   <groupId>com.alibaba</groupId>
