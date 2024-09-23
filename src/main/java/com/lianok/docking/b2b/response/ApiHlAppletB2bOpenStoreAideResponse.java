@@ -5,5 +5,5 @@ import com.lianok.core.entity.DockingResponseBase;
 /**
  * @author lianok.com
  */
-public class ApiHlAppletB2bOpenStoreResponse extends DockingResponseBase {
+public class ApiHlAppletB2bOpenStoreAideResponse extends DockingResponseBase {
 }

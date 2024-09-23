@@ -2,21 +2,21 @@ package com.lianok.docking.b2b.request;
 
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.docking.b2b.response.ApiHlAppletB2bGenerateTradeSignResponse;
+import com.lianok.docking.b2b.response.ApiHlAppletB2bPreAppletB2bResponse;
 
 
 /**
  * @author lianok.com
  */
-public class ApiHlAppletB2bGenerateTradeSignRequest extends AbstractDockingRequest {
+public class ApiHlAppletB2bPreAppletB2bRequest extends AbstractDockingRequest {
 
     private String merchantNo;
 
     private String operatorAccount;
 
-    public String signData;
+    private String signData;
 
-    public String sessionKey;
+    private String sessionKey;
 
     private String businessOrderNo;
 
@@ -68,6 +68,6 @@ public class ApiHlAppletB2bGenerateTradeSignRequest extends AbstractDockingReque
 
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
-        return ApiHlAppletB2bGenerateTradeSignResponse.class;
+        return ApiHlAppletB2bPreAppletB2bResponse.class;
     }
 }

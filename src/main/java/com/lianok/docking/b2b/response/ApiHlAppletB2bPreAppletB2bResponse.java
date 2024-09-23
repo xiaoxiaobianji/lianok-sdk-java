@@ -5,13 +5,13 @@ import com.lianok.core.entity.DockingResponseBase;
 /**
  * @author lianok.com
  */
-public class ApiHlAppletB2bGenerateTradeSignResponse extends DockingResponseBase {
+public class ApiHlAppletB2bPreAppletB2bResponse extends DockingResponseBase {
 
     private String merchantNo;
 
-    public String signData;
+    private String signData;
 
-    public String paySig;
+    private String paySig;
 
     private String signature;
 

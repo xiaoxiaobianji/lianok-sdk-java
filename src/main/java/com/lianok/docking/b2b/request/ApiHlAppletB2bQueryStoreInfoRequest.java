@@ -12,9 +12,9 @@ public class ApiHlAppletB2bQueryStoreInfoRequest extends AbstractDockingRequest 
 
     private String merchantNo;
 
-    public String openid;
+    private String openid;
 
-    public String mobilePhone;
+    private String mobilePhone;
 
     public String getMerchantNo() {
         return merchantNo;

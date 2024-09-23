@@ -5,7 +5,7 @@ import com.lianok.core.entity.DockingResponseBase;
 /**
  * @author lianok.com
  */
-public class ApiHlAppletB2bBatchCreateRetailResponse extends DockingResponseBase {
+public class ApiHlAppletB2bBatchCreateStoreResponse extends DockingResponseBase {
 
     private String failureRecords;
 

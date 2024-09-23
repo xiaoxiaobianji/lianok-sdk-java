@@ -2,17 +2,17 @@ package com.lianok.docking.b2b.request;
 
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.docking.b2b.response.ApiHlAppletB2bBatchCreateRetailResponse;
+import com.lianok.docking.b2b.response.ApiHlAppletB2bBatchCreateStoreResponse;
 
 
 /**
  * @author lianok.com
  */
-public class ApiHlAppletB2bBatchCreateRetailRequest extends AbstractDockingRequest {
+public class ApiHlAppletB2bBatchCreateStoreRequest extends AbstractDockingRequest {
 
     private String merchantNo;
 
-    public String retailInfoLists;
+    private String retailInfoLists;
 
     public String getMerchantNo() {
         return merchantNo;
@@ -37,6 +37,6 @@ public class ApiHlAppletB2bBatchCreateRetailRequest extends AbstractDockingReque
 
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
-        return ApiHlAppletB2bBatchCreateRetailResponse.class;
+        return ApiHlAppletB2bBatchCreateStoreResponse.class;
     }
 }
