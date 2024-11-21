@@ -69,6 +69,27 @@ public class ApiHlShopEntryRequest extends AbstractEntryRequest {
     private BigDecimal cloudPayLe1000Rate;
     private BigDecimal cloudPayGt1000Rate;
 
+
+    //指定这个商户编号添加下级商户
+    //集团添加下级商户(previous version:关联商户入件)
+    String merchantNo;
+
+    //集团账号名称
+    private String platformUserName;
+
+    //集团账号手机号
+    private String platformUserPhone;
+
+    //管理员名称
+    private String manageUserName;
+
+    //管理员登录账号
+    private String manageUserLoginAccount;
+
+    //管理员手机号
+    private String manageUserPhone;
+
+
     public String getChannelCode() {
         return channelCode;
     }
@@ -477,5 +498,53 @@ public class ApiHlShopEntryRequest extends AbstractEntryRequest {
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
         return ApiHlShopEntryResponse.class;
+    }
+
+    public String getMerchantNo() {
+        return merchantNo;
+    }
+
+    public void setMerchantNo(String merchantNo) {
+        this.merchantNo = merchantNo;
+    }
+
+    public String getPlatformUserName() {
+        return platformUserName;
+    }
+
+    public void setPlatformUserName(String platformUserName) {
+        this.platformUserName = platformUserName;
+    }
+
+    public String getPlatformUserPhone() {
+        return platformUserPhone;
+    }
+
+    public void setPlatformUserPhone(String platformUserPhone) {
+        this.platformUserPhone = platformUserPhone;
+    }
+
+    public String getManageUserName() {
+        return manageUserName;
+    }
+
+    public void setManageUserName(String manageUserName) {
+        this.manageUserName = manageUserName;
+    }
+
+    public String getManageUserLoginAccount() {
+        return manageUserLoginAccount;
+    }
+
+    public void setManageUserLoginAccount(String manageUserLoginAccount) {
+        this.manageUserLoginAccount = manageUserLoginAccount;
+    }
+
+    public String getManageUserPhone() {
+        return manageUserPhone;
+    }
+
+    public void setManageUserPhone(String manageUserPhone) {
+        this.manageUserPhone = manageUserPhone;
     }
 }
