@@ -22,7 +22,7 @@
 <dependency>
   <groupId>com.lianok.docking</groupId>
   <artifactId>lianok-sdk-java</artifactId>
-  <version>1.1.7-RELEASE</version>
+  <version>1.1.9-RELEASE</version>
 </dependency>
 <dependency>
   <groupId>com.alibaba</groupId>
