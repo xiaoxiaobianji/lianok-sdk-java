@@ -1,5 +1,6 @@
 package com.lianok.bank.business.request;
 
+import com.lianok.bank.business.response.ApiHlBankV2InfoUpdateResponse;
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 
@@ -63,6 +64,6 @@ public class ApiHlBankV2InfoUpdateRequest extends AbstractDockingRequest {
 
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
-        return null;
+        return ApiHlBankV2InfoUpdateResponse.class;
     }
 }
