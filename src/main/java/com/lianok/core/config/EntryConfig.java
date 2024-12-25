@@ -41,7 +41,7 @@ public final class EntryConfig extends AbstractConfig {
             return this;
         }
 
-        public Builder config(EnvEnum env, String authCode, String key) {
+        public Builder config(EnvEnum env, String authCode, String key, Integer timeout) {
             this.env = env;
             switch (env) {
                 case TEST:
@@ -61,8 +61,16 @@ public final class EntryConfig extends AbstractConfig {
             return this;
         }
 
+        public Builder config(EnvEnum env, String authCode, String key) {
+            return config(env, authCode, key, null);
+        }
+
         public EntryConfig build() {
-            return new EntryConfig(Objects.requireNonNull(this.url), Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key));
+            if (Objects.isNull(timeout)) {
+                return new EntryConfig(Objects.requireNonNull(this.url), Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key));
+            } else {
+                return new EntryConfig(Objects.requireNonNull(this.url), Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key), this.timeout);
+            }
         }
     }
 

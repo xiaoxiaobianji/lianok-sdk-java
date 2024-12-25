@@ -40,7 +40,7 @@ public final class Md5Config extends AbstractConfig {
             return this;
         }
 
-        public Builder config(EnvEnum env, String authCode, String key) {
+        public Builder config(EnvEnum env, String authCode, String key, Integer timeout) {
             this.env = env;
             switch (env) {
                 case TEST:
@@ -57,11 +57,20 @@ public final class Md5Config extends AbstractConfig {
             }
             this.authCode = authCode;
             this.key = key;
+            this.timeout = timeout;
             return this;
         }
 
+        public Builder config(EnvEnum env, String authCode, String key) {
+            return config(env, authCode, key, null);
+        }
+
         public Md5Config build() {
-            return new Md5Config(Objects.requireNonNull(this.url), Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key));
+            if (Objects.isNull(timeout)) {
+                return new Md5Config(Objects.requireNonNull(this.url), Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key));
+            } else {
+                return new Md5Config(Objects.requireNonNull(this.url), Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key), this.timeout);
+            }
         }
     }
 

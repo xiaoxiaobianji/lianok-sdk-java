@@ -12,6 +12,7 @@ public abstract class AbstractConfigBuilder<T extends AbstractConfigBuilder<T>> 
     protected EnvEnum env;
     protected String authCode;
     protected String key;
+    protected Integer timeout;
 
     protected AbstractConfigBuilder() {
     }

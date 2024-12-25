@@ -40,7 +40,7 @@ public final class UploadConfig extends AbstractConfig {
             return this;
         }
 
-        public UploadConfig.Builder config(EnvEnum env, String authCode, String key) {
+        public UploadConfig.Builder config(EnvEnum env, String authCode, String key, Integer timeout) {
             this.env = env;
             switch (env) {
                 case TEST:
@@ -57,11 +57,20 @@ public final class UploadConfig extends AbstractConfig {
             }
             this.authCode = authCode;
             this.key = key;
+            this.timeout = timeout;
             return this;
         }
 
+        public UploadConfig.Builder config(EnvEnum env, String authCode, String key) {
+            return config(env, authCode, key, null);
+        }
+
         public UploadConfig build() {
-            return new UploadConfig(url, Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key));
+            if (Objects.isNull(timeout)) {
+                return new UploadConfig(url, Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key));
+            } else {
+                return new UploadConfig(Objects.requireNonNull(this.url), Objects.requireNonNull(this.authCode), Objects.requireNonNull(this.key), this.timeout);
+            }
         }
     }
 
