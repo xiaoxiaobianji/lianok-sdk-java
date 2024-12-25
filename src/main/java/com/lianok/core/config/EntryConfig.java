@@ -25,6 +25,10 @@ public final class EntryConfig extends AbstractConfig {
         super(url, authCode, salt);
     }
 
+    private EntryConfig(String url, String authCode, String salt, int timeout) {
+        super(url, authCode, salt, timeout);
+    }
+
     public static class Builder extends AbstractConfigBuilder<Builder> {
 
         private String url;

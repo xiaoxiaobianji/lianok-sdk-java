@@ -181,6 +181,20 @@ public class ApiHlBankV2OpenRequest extends AbstractDockingRequest {
      */
     private String operatorPhone;
 
+    /**
+     * 苏宁银行协议id（默认不传）
+     * <p>
+     * 格式：日期+6 位
+     */
+    private String agreementId;
+    /**
+     * 平安银行会员属性（默认不传）
+     * <p>
+     * 00-用户子账户
+     * SH-商户子账户
+     */
+    private String businessProperty;
+
     public String getBusinessType() {
         return businessType;
     }
@@ -451,6 +465,22 @@ public class ApiHlBankV2OpenRequest extends AbstractDockingRequest {
 
     public void setOperatorPhone(String operatorPhone) {
         this.operatorPhone = operatorPhone;
+    }
+
+    public String getAgreementId() {
+        return agreementId;
+    }
+
+    public void setAgreementId(String agreementId) {
+        this.agreementId = agreementId;
+    }
+
+    public String getBusinessProperty() {
+        return businessProperty;
+    }
+
+    public void setBusinessProperty(String businessProperty) {
+        this.businessProperty = businessProperty;
     }
 
     @Override

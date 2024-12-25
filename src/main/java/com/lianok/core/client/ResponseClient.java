@@ -40,7 +40,7 @@ public class ResponseClient implements IDockingClient {
         lianOkRequest.setVersionNo(request.getVersionNo());
         lianOkRequest.setSign(sign);
         lianOkRequest.setParams(JSONObject.toJSONString(request.getParams()));
-        String responseContent = HttpUtil.doPost(config.getUrl(), JSONObject.toJSONString(lianOkRequest));
+        String responseContent = HttpUtil.doPost(config.getUrl(), JSONObject.toJSONString(lianOkRequest), config.getTimeout());
         return responseContent;
     }
 }

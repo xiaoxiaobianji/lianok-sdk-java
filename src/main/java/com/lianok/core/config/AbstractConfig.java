@@ -27,10 +27,28 @@ public abstract class AbstractConfig {
         return key;
     }
 
+    private final int timeout;
+
+    /**
+     * 请求网络超时时间
+     * 默认：10秒
+     * 上传图片默认：30秒
+     *
+     * @return
+     */
+    public int getTimeout() {
+        return timeout;
+    }
+
     protected AbstractConfig(String url, String authCode, String key) {
+        this(url, authCode, key, 10000);
+    }
+
+    protected AbstractConfig(String url, String authCode, String key, int timeout) {
         this.url = url;
         this.authCode = authCode;
         this.key = key;
+        this.timeout = timeout;
     }
 
     /**

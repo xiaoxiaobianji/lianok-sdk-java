@@ -47,6 +47,6 @@ public class UploadClient implements IDockingClient {
         if (!StrUtils.isEmpty(uploadRequest.getFileTag())) {
             paramMap.put("fileTag", uploadRequest.getFileTag());
         }
-        return HttpUtil.upload(config.getUrl(), paramMap, fileMap);
+        return HttpUtil.upload(config.getUrl(), paramMap, fileMap, config.getTimeout());
     }
 }

@@ -23,13 +23,18 @@ public final class UploadConfig extends AbstractConfig {
 
 
     private UploadConfig(String url, String authCode, String salt) {
-        super(url, authCode, salt);
+        super(url, authCode, salt, 30000);
+    }
+
+    private UploadConfig(String url, String authCode, String salt, int timeout) {
+        super(url, authCode, salt, timeout);
     }
 
 
     public static class Builder extends AbstractConfigBuilder<UploadConfig.Builder> {
 
         private String url;
+
         @Override
         protected UploadConfig.Builder self() {
             return this;
