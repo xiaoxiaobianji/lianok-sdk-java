@@ -112,6 +112,11 @@ public class ApiHlOrderPayAppletRequest extends AbstractDockingRequest {
      */
     private String clientIp;
 
+    /**
+     * 支付工具
+     */
+    private String payBiz;
+
     public String getMerchantNo() {
         return merchantNo;
     }
@@ -254,6 +259,14 @@ public class ApiHlOrderPayAppletRequest extends AbstractDockingRequest {
 
     public void setClientIp(String clientIp) {
         this.clientIp = clientIp;
+    }
+
+    public String getPayBiz() {
+        return payBiz;
+    }
+
+    public void setPayBiz(String payBiz) {
+        this.payBiz = payBiz;
     }
 
     @Override

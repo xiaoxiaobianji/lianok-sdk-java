@@ -20,6 +20,8 @@ public class ApiHlAppletB2bPreAppletB2bRequest extends AbstractDockingRequest {
 
     private String businessOrderNo;
 
+    private String notifyUrl;
+
     public String getMerchantNo() {
         return merchantNo;
     }
@@ -58,6 +60,14 @@ public class ApiHlAppletB2bPreAppletB2bRequest extends AbstractDockingRequest {
 
     public void setBusinessOrderNo(String businessOrderNo) {
         this.businessOrderNo = businessOrderNo;
+    }
+
+    public String getNotifyUrl() {
+        return notifyUrl;
+    }
+
+    public void setNotifyUrl(String notifyUrl) {
+        this.notifyUrl = notifyUrl;
     }
     
 
