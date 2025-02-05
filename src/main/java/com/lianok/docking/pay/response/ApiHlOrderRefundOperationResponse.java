@@ -23,6 +23,7 @@ public class ApiHlOrderRefundOperationResponse extends DockingResponseBase {
     private String channelRefundNo;
     private BigDecimal benefitAmount;
     private BigDecimal officialCouponAmount;
+    private String failReason;
 
     public String getOrderNo() {
         return orderNo;
@@ -134,5 +135,13 @@ public class ApiHlOrderRefundOperationResponse extends DockingResponseBase {
 
     public void setOfficialCouponAmount(BigDecimal officialCouponAmount) {
         this.officialCouponAmount = officialCouponAmount;
+    }
+
+    public String getFailReason() {
+        return failReason;
+    }
+
+    public void setFailReason(String failReason) {
+        this.failReason = failReason;
     }
 }

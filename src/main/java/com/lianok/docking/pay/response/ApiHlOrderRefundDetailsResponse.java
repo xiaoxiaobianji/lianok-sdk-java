@@ -24,6 +24,7 @@ public class ApiHlOrderRefundDetailsResponse extends DockingResponseBase {
     private String channelRefundNo;
     private BigDecimal serviceFee;
     private BigDecimal benefitAmount;
+    private String failReason;
 
     public String getOrderNo() {
         return orderNo;
@@ -143,5 +144,13 @@ public class ApiHlOrderRefundDetailsResponse extends DockingResponseBase {
 
     public void setBenefitAmount(BigDecimal benefitAmount) {
         this.benefitAmount = benefitAmount;
+    }
+
+    public String getFailReason() {
+        return failReason;
+    }
+
+    public void setFailReason(String failReason) {
+        this.failReason = failReason;
     }
 }
