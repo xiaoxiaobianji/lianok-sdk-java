@@ -11,6 +11,7 @@ public class ApiHlBalanceApplyPayResponse extends DockingResponseBase {
     private String orderNo;
     private String businessOrderNo;
     private String divideDetail;
+    private String msg;
 
 
     public String getMerchantNo() {
@@ -37,5 +38,12 @@ public class ApiHlBalanceApplyPayResponse extends DockingResponseBase {
     }
     public void setDivideDetail(String divideDetail) {
         this.divideDetail = divideDetail;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
 }
