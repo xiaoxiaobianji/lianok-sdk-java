@@ -2,7 +2,6 @@ package com.lianok.docking.withdraw.request;
 
 import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.docking.withdraw.response.ApiHlWithdrawCardBindResponse;
 import com.lianok.docking.withdraw.response.ApiHlWithdrawCardModifyResponse;
 
 /**
