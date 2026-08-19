@@ -36,6 +36,11 @@ public class ApiHlBillContractAccreditQueryResponse extends DockingResponseBase 
      */
     private Integer shareCategory;
 
+    /**
+     * 驳回原因
+     */
+    private String reason;
+
     public String getMerchantNo() {
         return merchantNo;
     }
@@ -82,5 +87,13 @@ public class ApiHlBillContractAccreditQueryResponse extends DockingResponseBase 
 
     public void setShareCategory(Integer shareCategory) {
         this.shareCategory = shareCategory;
+    }
+
+    public String getReason() {
+        return reason;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 }

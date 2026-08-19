@@ -19,6 +19,22 @@ public class ApiHlBillContractAccreditRequest extends AbstractDockingRequest {
     private Integer feeRate;
     private Integer shareCategory;
 
+    private String receiveMerchant;
+    private String agreementImage;
+    private String scenesImage;
+    private String otherImage;
+    private String remark;
+    private String balanceModel;
+    private String payMode;
+    private String busiInstruction;
+    private String capitalInstruction;
+    private String functionInstruction;
+    private String cooperationFlowImg;
+    private String enterCooperationImg;
+
+
+
+
     public String getMerchantNo() {
         return merchantNo;
     }
@@ -73,6 +89,102 @@ public class ApiHlBillContractAccreditRequest extends AbstractDockingRequest {
 
     public void setShareCategory(Integer shareCategory) {
         this.shareCategory = shareCategory;
+    }
+
+    public String getReceiveMerchant() {
+        return receiveMerchant;
+    }
+
+    public void setReceiveMerchant(String receiveMerchant) {
+        this.receiveMerchant = receiveMerchant;
+    }
+
+    public String getAgreementImage() {
+        return agreementImage;
+    }
+
+    public void setAgreementImage(String agreementImage) {
+        this.agreementImage = agreementImage;
+    }
+
+    public String getScenesImage() {
+        return scenesImage;
+    }
+
+    public void setScenesImage(String scenesImage) {
+        this.scenesImage = scenesImage;
+    }
+
+    public String getOtherImage() {
+        return otherImage;
+    }
+
+    public void setOtherImage(String otherImage) {
+        this.otherImage = otherImage;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    public String getBalanceModel() {
+        return balanceModel;
+    }
+
+    public void setBalanceModel(String balanceModel) {
+        this.balanceModel = balanceModel;
+    }
+
+    public String getPayMode() {
+        return payMode;
+    }
+
+    public void setPayMode(String payMode) {
+        this.payMode = payMode;
+    }
+
+    public String getBusiInstruction() {
+        return busiInstruction;
+    }
+
+    public void setBusiInstruction(String busiInstruction) {
+        this.busiInstruction = busiInstruction;
+    }
+
+    public String getCapitalInstruction() {
+        return capitalInstruction;
+    }
+
+    public void setCapitalInstruction(String capitalInstruction) {
+        this.capitalInstruction = capitalInstruction;
+    }
+
+    public String getFapitalInstruction() {
+        return functionInstruction;
+    }
+
+    public void setFunctionInstruction(String functionInstruction) {
+        this.functionInstruction = functionInstruction;
+    }
+
+    public String getCooperationFlowImg() {
+        return cooperationFlowImg;
+    }
+
+    public void setCooperationFlowImg(String cooperationFlowImg) {
+        this.cooperationFlowImg = cooperationFlowImg;
+    }
+
+    public String getEnterCooperationImg() {
+        return enterCooperationImg;
+    }
+
+    public void setEnterCooperationImg(String enterCooperationImg) {
+        this.enterCooperationImg = enterCooperationImg;
     }
 
     @Override

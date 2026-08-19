@@ -41,6 +41,11 @@ public class ApiHlBalanceApplyPayRequest extends AbstractDockingRequest {
      */
     private String accountType;
 
+    /**
+     * 分账类型
+     */
+    private String transferType;
+
     public String getMerchantNo() {
         return merchantNo;
     }
@@ -87,6 +92,14 @@ public class ApiHlBalanceApplyPayRequest extends AbstractDockingRequest {
 
     public void setAccountType(String accountType) {
         this.accountType = accountType;
+    }
+
+    public String getTransferType() {
+        return transferType;
+    }
+
+    public void setTransferType(String transferType) {
+        this.transferType = transferType;
     }
 
     @Override
