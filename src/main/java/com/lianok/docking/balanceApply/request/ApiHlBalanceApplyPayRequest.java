@@ -53,6 +53,11 @@ public class ApiHlBalanceApplyPayRequest extends AbstractDockingRequest {
      */
     private String transferType;
 
+    /**
+     * 手续费承担方
+     */
+    private String feeChargeSide;
+
     public String getMerchantNo() {
         return merchantNo;
     }
@@ -115,6 +120,14 @@ public class ApiHlBalanceApplyPayRequest extends AbstractDockingRequest {
 
     public void setShareAmount(BigDecimal shareAmount) {
         this.shareAmount = shareAmount;
+    }
+
+    public String getFeeChargeSide() {
+        return feeChargeSide;
+    }
+
+    public void setFeeChargeSide(String feeChargeSide) {
+        this.feeChargeSide = feeChargeSide;
     }
 
     @Override
