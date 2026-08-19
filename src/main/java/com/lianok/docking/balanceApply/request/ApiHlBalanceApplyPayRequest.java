@@ -4,6 +4,8 @@ import com.lianok.core.entity.AbstractDockingRequest;
 import com.lianok.core.entity.DockingResponseBase;
 import com.lianok.docking.balanceApply.response.ApiHlBalanceApplyPayResponse;
 
+import java.math.BigDecimal;
+
 /**
  * 余额分账-发起余额分账
  *
@@ -40,6 +42,11 @@ public class ApiHlBalanceApplyPayRequest extends AbstractDockingRequest {
      * 分账方账户类型
      */
     private String accountType;
+
+    /**
+     * 分账总金额
+     */
+    private BigDecimal shareAmount;
 
     /**
      * 分账类型
@@ -100,6 +107,14 @@ public class ApiHlBalanceApplyPayRequest extends AbstractDockingRequest {
 
     public void setTransferType(String transferType) {
         this.transferType = transferType;
+    }
+
+    public BigDecimal getShareAmount() {
+        return shareAmount;
+    }
+
+    public void setShareAmount(BigDecimal shareAmount) {
+        this.shareAmount = shareAmount;
     }
 
     @Override
