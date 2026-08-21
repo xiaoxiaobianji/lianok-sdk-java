@@ -18,9 +18,9 @@ public class ApiHlBillContractAccreditQueryResponse extends DockingResponseBase 
      */
     private String contractUrl;
     /**
-     * 分账开通状态
+     * 分账启用状态
      */
-    private Integer openStatus;
+    private Integer shareStatus;
     /**
      * 合同签署状态
      */
@@ -57,12 +57,12 @@ public class ApiHlBillContractAccreditQueryResponse extends DockingResponseBase 
         this.contractUrl = contractUrl;
     }
 
-    public Integer getOpenStatus() {
-        return openStatus;
+    public Integer getShareStatus() {
+        return shareStatus;
     }
 
-    public void setOpenStatus(Integer openStatus) {
-        this.openStatus = openStatus;
+    public void setShareStatus(Integer openStatus) {
+        this.shareStatus = shareStatus;
     }
 
     public Integer getContractStatus() {
