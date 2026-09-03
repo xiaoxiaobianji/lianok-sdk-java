@@ -1,8 +1,6 @@
-package com.lianok.docking.bill.response;
+package com.lianok.entry.merchant.response;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.entry.merchant.response.ApiHlShopQueryBranchShopListResponse;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

@@ -1,9 +1,8 @@
-package com.lianok.docking.bill.request;
+package com.lianok.entry.merchant.request;
 
-import com.lianok.core.entity.AbstractDockingRequest;
+import com.lianok.core.entity.AbstractEntryRequest;
 import com.lianok.core.entity.DockingResponseBase;
-import com.lianok.docking.bill.response.ApiHlFlowQueryResponse;
-import com.lianok.docking.bill.response.ApiHlSettleQueryResponse;
+import com.lianok.entry.merchant.response.ApiHlFlowQueryResponse;
 
 import java.time.LocalDate;
 
@@ -12,14 +11,12 @@ import java.time.LocalDate;
  *
  * @author lianok.com
  */
-public class ApiHlSettleQueryRequest extends AbstractDockingRequest {
+public class ApiHlFlowQueryRequest extends AbstractEntryRequest {
 
     /**
      * 查询日期
      */
-    private LocalDate queryBeginTime;
-
-    private LocalDate queryEndTime;
+    private LocalDate billDate;
 
     private String merchantNo;
 
@@ -27,22 +24,13 @@ public class ApiHlSettleQueryRequest extends AbstractDockingRequest {
 
     private Integer pageSize;
 
-    public LocalDate getQueryBeginTime() {
-        return queryBeginTime;
+    public LocalDate getBillDate() {
+        return billDate;
     }
 
-    public void setQueryBeginTime(LocalDate queryBeginTime) {
-        this.queryBeginTime = queryBeginTime;
+    public void setBillDate(LocalDate billDate) {
+        this.billDate = billDate;
     }
-
-    public LocalDate getQueryEndTime() {
-        return queryEndTime;
-    }
-
-    public void setQueryEndTime(LocalDate queryEndTime) {
-        this.queryEndTime = queryEndTime;
-    }
-
 
     public String getMerchantNo() {
         return merchantNo;
@@ -71,12 +59,12 @@ public class ApiHlSettleQueryRequest extends AbstractDockingRequest {
 
     @Override
     public String getResource() {
-        return "api.hl.settle.query";
+        return "api.hl.flow.query";
     }
 
     @Override
     public Class<? extends DockingResponseBase> getResponseClass() {
-        return ApiHlSettleQueryResponse.class;
+        return ApiHlFlowQueryResponse.class;
     }
 
 }
