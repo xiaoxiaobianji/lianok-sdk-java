@@ -71,6 +71,11 @@ public class ApiHlBalanceApplyReceiverApplyRequest extends AbstractDockingReques
      */
     private String legalLicenceNo;
 
+    /**
+     * 汇付拓展字段
+     */
+    private String huiFuExpandInfo;
+
     public String getMerchantNo() {
         return merchantNo;
     }
@@ -165,6 +170,14 @@ public class ApiHlBalanceApplyReceiverApplyRequest extends AbstractDockingReques
 
     public void setLegalLicenceNo(String legalLicenceNo) {
         this.legalLicenceNo = legalLicenceNo;
+    }
+
+    public String getHuiFuExpandInfo() {
+        return huiFuExpandInfo;
+    }
+
+    public void setHuiFuExpandInfo(String huiFuExpandInfo) {
+        this.huiFuExpandInfo = huiFuExpandInfo;
     }
 
     @Override
